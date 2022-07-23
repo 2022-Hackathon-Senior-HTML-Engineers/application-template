@@ -16,8 +16,6 @@ const YoutubeVideo = () => {
     <div className="">
       <div className="">
 
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
-
 
     </div>
     </div>
