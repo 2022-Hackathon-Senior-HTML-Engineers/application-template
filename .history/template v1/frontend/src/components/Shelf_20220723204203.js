@@ -1,17 +1,5 @@
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
-import { useRecoilState } from "recoil";
-
-import { currentShelfState } from "../atoms/currentShelfState";
-
-import DetailsPopup from "../components/DetailsPopup";
-import { useState } from "react";
-import Soju from "../images/soju.png";
-import Juice from "../images/juice.png";
-import MountGay from "../images/mountGay.png";
-
-import BackButton from "../images/back-button.png";
-import DetailsButton from "../images/details-button.png";
 
 import StrawberrySoju from "../images/drinks/strawberry-soju.png";
 import AppleSoju from "../images/drinks/apple-soju.png";
@@ -20,10 +8,10 @@ import YakultSoju from "../images/drinks/yakult-soju.png";
 import Tui from "../images/drinks/tui.png";
 
 const Shelf = () => {
-  const [currentNavState, setCurrentNavState] =
-    useRecoilState(currentShelfState);
 
-  const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const ShelfItemsCollection = [
+    4,2,1,0,1,3,4,0,4,1,0,1,2,0,2,3
+  ];
 
   const DrinksCollection = [
     { id: 0, name: "Strawberry Soju", imageName: StrawberrySoju },
@@ -36,7 +24,8 @@ const Shelf = () => {
   const [visibility, setVisibility] = useState(false);
   const popupCloseHandler = (e) => {
     setVisibility(e);
-  };
+  }
+
 
   return (
     <div>
@@ -55,35 +44,14 @@ const Shelf = () => {
               ))}
             </div>
           </div>
-        </div>
-        <div className="machine-bottom">
-          <Grid container spacing={0}>
-            <Grid item xs={6} md={4}>
-              <div className="nav-left">
-                <h1>AYO</h1>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={8}>
-              <div className="nav-right">
-                <img src={BackButton} className="back-button" />
-                <div className="task-box">
-                  <h4 style={{ "margin-top": "8px", "margin-bottom": "8px" }}>
-                    YOUR CURRENT TASK HERE
-                  </h4>
-                </div>
 
-                <img
-                  src={DetailsButton}
-                  className="details-button"
-                  onClick={(e) => setVisibility(!visibility)}
-                />
-              </div>
-            </Grid>
-          </Grid>
+
         </div>
       </div>
 
-      <DetailsPopup
+      <div className="nav-container"></div>
+
+      <CustomPopup
         onClose={popupCloseHandler}
         show={visibility}
         title="Drinks"
@@ -92,12 +60,18 @@ const Shelf = () => {
         <img src={Juice} />
         <img src={RedBull} />
         <img src={MountGay} />
-      </DetailsPopup>
+
+
+      </CustomPopup>
+      <button className="drinks-button" onClick={(e) => setVisibility(!visibility)} >What drinks do you want?</button>
     </div>
   );
 };
 
 export default Shelf;
+
+
+
 
 // <div className="grid-parent">
 // <div className="grid-container">

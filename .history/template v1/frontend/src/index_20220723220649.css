@@ -173,7 +173,7 @@ input.error {
 }
 
 .grid-item:hover {
-  background-color: rgba(97, 88, 88, 0.25);
+  background-color: rgba(0, 224, 213, 0.207);
   opacity: 0.9;
   cursor: pointer;
 }
@@ -198,7 +198,7 @@ input.error {
 
 .nav-right {
 text-align: left;
-padding: 5px 0 0 9px;
+padding: 6px 0 0 9px;
 }
 
 .nav-container {
@@ -234,19 +234,4 @@ cursor: pointer;
   background-color: blue;
   height: 100vh;
   overflow: hidden;
-}
-
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 96.25%;
-  position: relative;
-  height: 0;
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
 }

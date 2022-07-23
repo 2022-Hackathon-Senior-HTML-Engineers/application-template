@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
 
 /* FONTS */
-h1, h2, h3 {
+h1 {
   margin: 0;
 }
 
@@ -173,7 +173,7 @@ input.error {
 }
 
 .grid-item:hover {
-  background-color: rgba(97, 88, 88, 0.25);
+  background-color: rgba(0, 224, 213, 0.207);
   opacity: 0.9;
   cursor: pointer;
 }
@@ -187,10 +187,6 @@ input.error {
   height: 145px;
 }
 
-.task-box {
-  height: 60px;
-}
-
 .nav-left {
   text-align: center;
 
@@ -198,7 +194,7 @@ input.error {
 
 .nav-right {
 text-align: left;
-padding: 5px 0 0 9px;
+padding: 5px 0 0 8px;
 }
 
 .nav-container {
@@ -213,19 +209,9 @@ padding: 5px 0 0 9px;
 
 }
 
-.back-button:hover {
-opacity: 0.6;
-cursor: pointer;
-}
-
 .details-button {
 
 }
-
-.details-button:hover {
-  opacity: 0.6;
-  cursor: pointer;
-  }
 
 /* CONTENT */
 
@@ -234,19 +220,4 @@ cursor: pointer;
   background-color: blue;
   height: 100vh;
   overflow: hidden;
-}
-
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 96.25%;
-  position: relative;
-  height: 0;
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
 }
