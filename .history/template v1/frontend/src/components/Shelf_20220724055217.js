@@ -47,8 +47,6 @@ const Shelf = () => {
 
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
 
-  const [itemPosition, setItemPosition] = useState(0);
-
   const [currentSelection, setCurrentSelection] = useState([0, 0]);
 
   const [onDisplay, setOnDisplay] = useState([
@@ -66,8 +64,8 @@ const Shelf = () => {
     [11, 11],
     [12, 12],
     [13, 13],
-    [17, 15],
-    [17, 15],
+    [14, 14],
+    [15, 15],
   ]);
 
   const [ShelfItemsCollection, setShelfItemsCollection] = useState([
@@ -155,7 +153,7 @@ const Shelf = () => {
                 <div
                   className="grid-item"
                   onClick={() => (
-                    setCurrentTaskState(DisplayItem[0]), setCurrentDrinkState(DisplayItem[1]), setItemPosition(i)
+                    setCurrentDrinkState(DisplayItem[1]), setCurrentTaskState(DisplayItem[0])
                   )}
                 >
                   <Tooltip title={<h2>{DrinksCollection[DisplayItem[1]].name}</h2>}>
@@ -196,24 +194,24 @@ const Shelf = () => {
                     <img
                       src={FinishButton}
                       className="finish-button"
-                      onClick={() => 
+                      onClick={() =>
                         setOnDisplay(
                           [].concat(
-                            onDisplay.slice(0, itemPosition),
-                            onDisplay.slice(
-                              itemPosition + 1,
+                            OnDisplay.slice(0, currentItemState),
+                            ShelfItemsCollection.slice(
+                              currentItemState + 1,
                               16
                             ),
-                            [[17,15]]
+                            [15]
                           )
                         )
-                        
                       }
                     />
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
                         {
-                          TasksCollection[[currentTaskState]
+                          TasksCollection[
+                            ShelfTasksCollection[currentTaskState]
                           ].title
                         }
                       </h5>

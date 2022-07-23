@@ -158,6 +158,7 @@ const Shelf = () => {
                     setCurrentTaskState(DisplayItem[0]), setCurrentDrinkState(DisplayItem[1]), setItemPosition(i)
                   )}
                 >
+                {console.log(DrinksCollection[DisplayItem[1]].name)}
                   <Tooltip title={<h2>{DrinksCollection[DisplayItem[1]].name}</h2>}>
                     <img
                       src={DrinksCollection[DisplayItem[1]].imageName}
@@ -196,7 +197,16 @@ const Shelf = () => {
                     <img
                       src={FinishButton}
                       className="finish-button"
-                      onClick={() => 
+                      onClick={() => (console.log(
+                          [].concat(
+                            onDisplay.slice(0, itemPosition),
+                            onDisplay.slice(
+                              itemPosition + 1,
+                              16
+                            ),
+                            [[17,15]]
+                          )
+                        ),
                         setOnDisplay(
                           [].concat(
                             onDisplay.slice(0, itemPosition),
@@ -206,14 +216,15 @@ const Shelf = () => {
                             ),
                             [[17,15]]
                           )
-                        )
+                        ))
                         
                       }
                     />
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
                         {
-                          TasksCollection[[currentTaskState]
+                          TasksCollection[
+                            currentTaskState]
                           ].title
                         }
                       </h5>

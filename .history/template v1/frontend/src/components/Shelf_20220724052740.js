@@ -43,11 +43,9 @@ const Shelf = () => {
   const [currentNavState, setCurrentNavState] =
     useRecoilState(currentShelfState);
 
-  const [currentDrinkState, setCurrentDrinkState] = useRecoilState(itemState);
+  const [currentItemState, setCurrentItemState] = useRecoilState(itemState);
 
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
-
-  const [itemPosition, setItemPosition] = useState(0);
 
   const [currentSelection, setCurrentSelection] = useState([0, 0]);
 
@@ -66,8 +64,8 @@ const Shelf = () => {
     [11, 11],
     [12, 12],
     [13, 13],
-    [17, 15],
-    [17, 15],
+    [14, 14],
+    [15, 15],
   ]);
 
   const [ShelfItemsCollection, setShelfItemsCollection] = useState([
@@ -121,7 +119,6 @@ const Shelf = () => {
     },
     { id: 15, title: "Lecturer forgets to record video. It's audio only." },
     { id: 16, title: "Lecturer forgot to turn up to lecture." },
-    { id: 17, title: "" },
   ];
 
   const [visibilityDetails, setVisibilityDetails] = useState(false);
@@ -151,18 +148,18 @@ const Shelf = () => {
         <div className="items-window">
           <div className="grid-parent">
             <div className="grid-container">
-              {onDisplay.map((DisplayItem, i) => (
+              {ShelfItemsCollection.map((ShelfItem, i) => (
                 <div
                   className="grid-item"
                   onClick={() => (
-                    setCurrentTaskState(DisplayItem[0]), setCurrentDrinkState(DisplayItem[1]), setItemPosition(i)
+                    setCurrentItemState(i), setCurrentTaskState(i)
                   )}
                 >
-                  <Tooltip title={<h2>{DrinksCollection[DisplayItem[1]].name}</h2>}>
+                  <Tooltip title={<h2>{DrinksCollection[ShelfItem].name}</h2>}>
                     <img
-                      src={DrinksCollection[DisplayItem[1]].imageName}
+                      src={DrinksCollection[ShelfItem].imageName}
                       className=""
-                      alt={DrinksCollection[DisplayItem[1]].name}
+                      alt={DrinksCollection[ShelfItem].name}
                     />
                   </Tooltip>
                 </div>
@@ -176,9 +173,10 @@ const Shelf = () => {
               <Grid container spacing={0}>
                 <Grid item xs={6} md={4}>
                   <div className="nav-left">
+                    {console.log(DrinksCollection[currentItemState])}
                     <img
                       src={
-                        DrinksCollection[currentDrinkState]
+                        DrinksCollection[ShelfItemsCollection[currentItemState]]
                           .imageName
                       }
                       className=""
@@ -196,24 +194,24 @@ const Shelf = () => {
                     <img
                       src={FinishButton}
                       className="finish-button"
-                      onClick={() => 
-                        setOnDisplay(
+                      onClick={() =>
+                        setShelfItemsCollection(
                           [].concat(
-                            onDisplay.slice(0, itemPosition),
-                            onDisplay.slice(
-                              itemPosition + 1,
+                            ShelfItemsCollection.slice(0, currentItemState),
+                            ShelfItemsCollection.slice(
+                              currentItemState + 1,
                               16
                             ),
-                            [[17,15]]
+                            [15]
                           )
                         )
-                        
                       }
                     />
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
                         {
-                          TasksCollection[[currentTaskState]
+                          TasksCollection[
+                            ShelfTasksCollection[currentTaskState]
                           ].title
                         }
                       </h5>
@@ -291,7 +289,7 @@ const Shelf = () => {
               <div className="pick-task-container">
                 <div className="pick-task-content">
                   {" "}
-                  {TasksCollection.slice(0,17).map((Task, i) => (
+                  {TasksCollection.map((Task, i) => (
                     <div
                       className="pick-task-item"
                       onClick={() =>
@@ -342,8 +340,8 @@ const Shelf = () => {
             onClick={() =>
               setOnDisplay(
                 [].concat(
-                  [currentSelection],
-                  onDisplay.slice(0, 15)
+                  currentSelection,
+                  onDisplay.slice(1, 16)
                 )
               )
             }
