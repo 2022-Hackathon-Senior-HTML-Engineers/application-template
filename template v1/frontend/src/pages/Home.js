@@ -18,7 +18,9 @@ function Home() {
       >
         <h1>Hello This is Popup Content Area</h1>
         <h2>This is my lorem ipsum text here!</h2>
+
       </CustomPopup>
+      <button className="drinks-button" onClick={(e) => setVisibility(!visibility)} >What drinks do you want?</button>
 
       <h1> this is home</h1>
 
