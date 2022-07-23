@@ -328,11 +328,7 @@ const Shelf = () => {
               </div>
             </Grid>
           </Grid>
-          <img
-                            src={SetNewTaskButton}
-                            className="nav-button"
-                            alt="Add new task button"
-                          />
+
         </div>
       </TasksPopup>
     </div>
