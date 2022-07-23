@@ -3,3 +3,6 @@ npm install express
 npm install -g nodemon
 npm install dotenv
 npm install mongoose
+
+npm install react
+npm i
