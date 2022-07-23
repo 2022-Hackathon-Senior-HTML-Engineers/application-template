@@ -2,8 +2,8 @@ import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
 
 // components
-import DrinkDetails from "../components/DrinkDetails"
-import DrinkForm from "../components/DrinkForm"
+// import DrinkDetails from "../components/DrinkDetails"
+// import DrinkForm from "../components/DrinkForm"
 
 const Home = () => {
   const { drinks, dispatch } = useDrinksContext()
@@ -28,7 +28,7 @@ const Home = () => {
           <DrinkDetails drink={drink} key={drink._id} />
         ))}
       </div>
-      <DrinkForm />
+      {/* <DrinkForm /> */}
     </div>
   )
 }
