@@ -228,7 +228,7 @@ const Shelf = () => {
       >
         <div></div>
         <div className="drinks-list">
-          <div className="grid-container-drinks-list">
+          <div className="grid-container">
             {DrinksCollection.map((Drink) => (
               <div
                 className="grid-item"

@@ -45,8 +45,9 @@ const Shelf = () => {
 
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
 
-  const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
-  //   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+
+  const ShelfItemsCollection=[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+//   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
 
   const DrinksCollection = [
     { id: 0, name: "Original Soju", imageName: OriginalSoju },
@@ -226,27 +227,27 @@ const Shelf = () => {
         show={visibilityTasks}
         title="Set Tasks"
       >
-        <div></div>
-        <div className="drinks-list">
-          <div className="grid-container-drinks-list">
-            {DrinksCollection.map((Drink) => (
-              <div
-                className="grid-item"
-                onClick={() => (
-                  setCurrentItemState(Drink), setCurrentTaskState(Drink)
-                )}
-              >
-                <Tooltip title={<h2>{DrinksCollection[0].name}</h2>}>
-                  <img
-                    src={DrinksCollection[0].imageName}
-                    className=""
-                    alt={DrinksCollection[0].name}
-                  />
-                </Tooltip>
-              </div>
-            ))}
-          </div>
 
+      <div></div>
+        <div className="drinks-list">
+        <div className="grid-container">{DrinksCollection.map((Drink) => (
+                <div
+                  className="grid-item"
+                  onClick={() => (
+                    setCurrentItemState(Drink),
+                    setCurrentTaskState(Drink)
+                  )}
+                >
+                  <Tooltip title={<h2>{DrinksCollection[0].name}</h2>}>
+                    <img
+                      src={DrinksCollection[0].imageName}
+                      className=""
+                      alt={DrinksCollection[0].name}
+                    />
+                  </Tooltip>
+                </div>
+              ))}</div>
+        
           <img src={OriginalSoju} className="grid-item" />
           <img src={GrapeSoju} className="grid-item" />
           <img src={StrawberrySoju} className="grid-item" />

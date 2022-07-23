@@ -165,12 +165,12 @@ input.error {
 
 .grid-container-drinks-list {
   margin: auto;
-  width: 405px;
+  width: 355px;
   display: grid;
-  grid-template-columns: 80px 80px 80px 80px 80px;
+  grid-template-columns: 80px 80px 80px 80px;
   /* background-color: #2196F3; */
   padding: 15px 5px 0 5px;
-  grid-gap: 10px 0;
+  grid-gap: 20px 10px;
 }
 
 .grid-item {

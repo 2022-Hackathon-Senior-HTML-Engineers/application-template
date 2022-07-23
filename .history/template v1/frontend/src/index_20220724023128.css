@@ -165,7 +165,7 @@ input.error {
 
 .grid-container-drinks-list {
   margin: auto;
-  width: 405px;
+  width: 445px;
   display: grid;
   grid-template-columns: 80px 80px 80px 80px 80px;
   /* background-color: #2196F3; */
