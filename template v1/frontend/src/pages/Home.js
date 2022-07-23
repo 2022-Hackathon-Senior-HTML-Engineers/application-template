@@ -5,6 +5,7 @@ import Soju from "../images/soju.png"
 import Juice from "../images/juice.png"
 import MountGay from "../images/mountGay.png"
 import RedBull from "../images/redBull.png"
+import YoutubeEmbed from "../components/YoutubeEmbed";
 
 import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
@@ -37,11 +38,15 @@ const Home = () => {
   return (
     <div className="home">
       <div className="drinks">
+        <YoutubeEmbed embedId="rokGy0huYEA" />
+
         {drinks && drinks.map(drink => (
           <DrinkDetails drink={drink} key={drink._id} />
         ))}
       </div>
       <DrinkForm />
+
+
       <CustomPopup
         onClose={popupCloseHandler}
         show={visibility}
