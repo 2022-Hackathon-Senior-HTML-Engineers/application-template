@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const rewardSchema = new Schema({
+const drinkSchema = new Schema({
   title: {
     type: String,
     required: true
@@ -17,4 +17,4 @@ const rewardSchema = new Schema({
   }
 }, { timestamps: true })
 
-module.exports = mongoose.model('Reward', rewardSchema)
+module.exports = mongoose.model('Drink', drinkSchema)
