@@ -1,10 +1,6 @@
 import CustomPopup from "../components/CustomPopup";
 import { useState } from "react"
 import { Grid } from "@mui/material";
-import Soju from "../images/soju.png"
-import Juice from "../images/juice.png"
-import MountGay from "../images/mountGay.png"
-import RedBull from "../images/redBull.png"
 import YoutubeEmbed from "../components/YoutubeEmbed";
 import Soju from "../images/popUpDrinks/soju.png"
 import Juice from "../images/popUpDrinks/juice.png"
