@@ -1,7 +1,6 @@
 import CustomPopup from "../components/CustomPopup";
 import { useState } from "react"
 import { Grid } from "@mui/material";
-import YoutubeEmbed from "../components/YoutubeEmbed";
 import Soju from "../images/popUpDrinks/soju.png"
 import Juice from "../images/popUpDrinks/juice.png"
 import MountGay from "../images/popUpDrinks/mountGay.png"
@@ -14,6 +13,7 @@ import Vodka from "../images/popUpDrinks/vodka.png"
 import Tui from "../images/drinks/tui.png"
 import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
+import ReactPlayer from 'react-player/youtube'
 
 // components
 import DrinkDetails from "../components/DrinkDetails"
@@ -43,6 +43,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="drinks">
+        <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' controls={true} />
         {/* <YoutubeEmbed embedId="rokGy0huYEA" /> */}
 
         {/* {drinks && drinks.map(drink => (
@@ -50,7 +51,6 @@ const Home = () => {
         ))} */}
       </div>
       {/* <DrinkForm /> */}
-
 
       <CustomPopup
         onClose={popupCloseHandler}
