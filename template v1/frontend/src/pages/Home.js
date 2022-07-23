@@ -1,3 +1,11 @@
+import CustomPopup from "../components/CustomPopup";
+import { useState } from "react"
+import { Grid } from "@mui/material";
+import Soju from "../images/soju.png"
+import Juice from "../images/juice.png"
+import MountGay from "../images/mountGay.png"
+import RedBull from "../images/redBull.png"
+
 import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
 
@@ -7,6 +15,11 @@ import DrinkForm from "../components/DrinkForm"
 
 const Home = () => {
   const { drinks, dispatch } = useDrinksContext()
+  const [visibility, setVisibility] = useState(false);
+  const popupCloseHandler = (e) => {
+    setVisibility(e);
+  }
+
 
   useEffect(() => {
     const fetchDrinks = async () => {
@@ -45,4 +58,5 @@ const Home = () => {
     </div>
   )
 }
+
 export default Home
