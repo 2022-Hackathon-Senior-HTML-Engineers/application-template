@@ -19,17 +19,6 @@ const Shelf = () => {
     { id: 3, name: "Apple Soju", imageName: AppleSoju },
     { id: 4, name: "Apple Soju", imageName: AppleSoju },
     { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 5, name: "Strawberry Soju", imageName: StrawberrySoju },
   ];
 
   const DrinksCollection = [
