@@ -7,8 +7,8 @@ import { currentShelfState } from "../atoms/currentShelfState";
 import DetailsPopup from "../components/DetailsPopup";
 import { useState } from "react";
 import Soju from "../images/popUpDrinks/soju.png";
-import Juice from "../images/popUpDrinks/juice.png";
-import MountGay from "../images/popUpDrinks/mountGay.png";
+import Juice from "../images/juice.png";
+import MountGay from "../images/mountGay.png";
 
 import BackButton from "../images/back-button.png";
 import DetailsButton from "../images/details-button.png";
