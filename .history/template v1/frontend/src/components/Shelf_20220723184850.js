@@ -3,7 +3,6 @@ import { Grid } from "@mui/material";
 
 import StrawberrySoju from "../images/drinks/strawberry-soju.png";
 import AppleSoju from "../images/drinks/apple-soju.png";
-import RedBull from "../images/drinks/red-bull.png";
 
 const Shelf = () => {
 

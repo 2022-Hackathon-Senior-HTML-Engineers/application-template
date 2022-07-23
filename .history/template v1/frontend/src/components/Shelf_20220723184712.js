@@ -3,18 +3,16 @@ import { Grid } from "@mui/material";
 
 import StrawberrySoju from "../images/drinks/strawberry-soju.png";
 import AppleSoju from "../images/drinks/apple-soju.png";
-import RedBull from "../images/drinks/red-bull.png";
 
 const Shelf = () => {
 
   const ShelfItemsCollection = [
-    0,2,1,0,1,1,1,0,0,1,0,1,2,0,2,2
+    0,1,1,0,1,1,1,0,0,1,0,1,0,0,1,1
   ];
 
   const DrinksCollection = [
     { id: 0, name: "Strawberry Soju", imageName: StrawberrySoju },
     { id: 1, name: "Apple Soju", imageName: AppleSoju },
-    { id: 2, name: "Red Bull", imageName: RedBull },
   ];
 
 
