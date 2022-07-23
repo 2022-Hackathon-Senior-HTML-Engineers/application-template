@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
 import { Tooltip } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";

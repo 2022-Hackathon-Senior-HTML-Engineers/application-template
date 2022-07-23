@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
 import { Tooltip } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
 import { taskState } from "../atoms/currentTaskState";
 import DrinksCollection from "../data/DrinksCollection";
-import TasksCollection from "../data/TasksCollection";
 
 import TasksPopup from "../components/DetailsPopup";
 import CustomPopup from "../components/CustomPopup";
@@ -23,6 +22,17 @@ import User from "../images/user.png";
 import ProfileButton from "../images/profile-button.png";
 import LogOutButton from "../images/log-out-button.png";
 import SetNewTaskButton from "../images/set-new-task-button.png";
+
+import Juice from "../images/popUpDrinks/juice.png";
+import MountGay from "../images/popUpDrinks/mountGay.png";
+import StrawberrySoju from "../images/drinks/strawberry-soju.png";
+import RedBull from "../images/drinks/red-bull.png";
+import Corona from "../images/popUpDrinks/corona.png";
+import FireBall from "../images/popUpDrinks/fireball.png";
+import GingerBeer from "../images/popUpDrinks/gingerBeer.png";
+import UpNGo from "../images/popUpDrinks/upngo.png";
+import Vodka from "../images/popUpDrinks/vodka.png";
+import Tui from "../images/drinks/tui.png";
 
 
 const Shelf = () => {
@@ -51,6 +61,33 @@ const Shelf = () => {
     [17, 15],
     [17, 15],
   ]);
+
+  const TasksCollection = [
+    { id: 0, title: "You hear the lecturer's catch phrase." },
+    { id: 1, title: "Survive 20 minutes without having a drink." },
+    { id: 2, title: "Learn 3 new concepts." },
+    { id: 3, title: "Work with a new equation." },
+    {
+      id: 4,
+      title: 'The lecturer asks "Any questions?" and no questions are asked.',
+    },
+    { id: 5, title: "The lecturer makes a typo." },
+    { id: 6, title: "Go through 10 lecture slides." },
+    { id: 7, title: "You hear classroom claps in the background." },
+    { id: 8, title: "The professor stutters." },
+    { id: 9, title: "Plays a youtube video with less than 60 likes." },
+    { id: 10, title: "Repeats the same word at least 3 times in a row." },
+    { id: 11, title: "Has a full lag moment." },
+    { id: 12, title: "Shit talks another department." },
+    { id: 13, title: "Teaches data structures and algorithms." },
+    {
+      id: 14,
+      title: "Has a promotion for something at the start of the lecture.",
+    },
+    { id: 15, title: "Lecturer forgets to record video. It's audio only." },
+    { id: 16, title: "Lecturer forgot to turn up to lecture." },
+    { id: 17, title: "" },
+  ];
 
   const [visibilityDetails, setVisibilityDetails] = useState(false);
   const [visibilityTasks, setVisibilityTasks] = useState(false);
@@ -186,6 +223,16 @@ const Shelf = () => {
         show={visibilityDetails}
         title="Details"
       >
+        <img src={StrawberrySoju} className="grid-item" />
+        <img src={Juice} className="grid-item" />
+        <img src={RedBull} className="grid-item" />
+        <img src={MountGay} className="grid-item" />
+        <img src={Corona} className="grid-item" />
+        <img src={FireBall} className="grid-item" />
+        <img src={GingerBeer} className="grid-item" />
+        <img src={UpNGo} className="grid-item" />
+        <img src={Vodka} className="grid-item" />
+        <img src={Tui} className="grid-item" />
       </CustomPopup>
 
       <TasksPopup onClose={popupCloseTasksHandler} show={visibilityTasks}>

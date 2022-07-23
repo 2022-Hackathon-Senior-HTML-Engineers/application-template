@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
 import { Tooltip } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
 import { taskState } from "../atoms/currentTaskState";
 import DrinksCollection from "../data/DrinksCollection";
-import TasksCollection from "../data/TasksCollection";
 
 import TasksPopup from "../components/DetailsPopup";
 import CustomPopup from "../components/CustomPopup";
@@ -23,6 +22,17 @@ import User from "../images/user.png";
 import ProfileButton from "../images/profile-button.png";
 import LogOutButton from "../images/log-out-button.png";
 import SetNewTaskButton from "../images/set-new-task-button.png";
+
+import Juice from "../images/popUpDrinks/juice.png";
+import MountGay from "../images/popUpDrinks/mountGay.png";
+import StrawberrySoju from "../images/drinks/strawberry-soju.png";
+import RedBull from "../images/drinks/red-bull.png";
+import Corona from "../images/popUpDrinks/corona.png";
+import FireBall from "../images/popUpDrinks/fireball.png";
+import GingerBeer from "../images/popUpDrinks/gingerBeer.png";
+import UpNGo from "../images/popUpDrinks/upngo.png";
+import Vodka from "../images/popUpDrinks/vodka.png";
+import Tui from "../images/drinks/tui.png";
 
 
 const Shelf = () => {
