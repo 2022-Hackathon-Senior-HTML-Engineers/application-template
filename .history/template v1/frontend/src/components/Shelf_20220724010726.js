@@ -110,7 +110,9 @@ const Shelf = () => {
         </div>
         <div className="machine-bottom">
           {currentNavState ? (
-            <><Grid container spacing={0}>
+            <></>
+          ) : (
+            <Grid container spacing={0}>
               <Grid item xs={6} md={4}>
                 <div className="nav-left">
                   <img
@@ -137,8 +139,8 @@ const Shelf = () => {
                   />
                 </div>
               </Grid>
-            </Grid></>
-          ) : <></>}
+            </Grid>
+          )}
         </div>
       </div>
 
