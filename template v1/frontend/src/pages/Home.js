@@ -12,7 +12,6 @@ import GingerBeer from "../images/popUpDrinks/gingerBeer.png"
 import UpNGo from "../images/popUpDrinks/upngo.png"
 import Vodka from "../images/popUpDrinks/vodka.png"
 import Tui from "../images/drinks/tui.png"
-import Yakult from "../images/drinks/yakult-soju.png"
 import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
 
@@ -68,8 +67,6 @@ const Home = () => {
         <img src={UpNGo} />
         <img src={Vodka} />
         <img src={Tui} />
-        <img src={Yakult} />
-
 
       </CustomPopup>
       <button className="drinks-button" onClick={(e) => setVisibility(!visibility)} >What drinks do you want?</button>
