@@ -371,7 +371,7 @@ input.error {
 .notepad-section {
   height: 300px;
   width: 300px;
-  margin-left: 30px;
+  margin-left: 00px;
   background-image: url("../src/images/post-it.png");
   background-repeat: no-repeat;
 }
@@ -380,7 +380,4 @@ input.error {
 }
 
 .stopwatch-section {
-  background-color: yellow;
-  height: 260px;
-  width: 290px;
 }

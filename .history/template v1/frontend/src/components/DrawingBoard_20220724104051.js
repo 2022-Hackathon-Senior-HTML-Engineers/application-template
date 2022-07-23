@@ -10,10 +10,10 @@ const DrawingPad = () => {
   return (
     <ReactSketchCanvas
       style={styles}
-      width="300px"
-      height="260px"
+      width="60px"
+      height="40px"
       strokeWidth={4}
-      strokeColor="#72DDF7"
+      strokeColor="red"
     />
   );
 };
