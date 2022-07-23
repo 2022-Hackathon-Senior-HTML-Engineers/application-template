@@ -323,7 +323,7 @@ const Shelf = () => {
                   </div>
                 </div>
                 <h4>Currently selected drink:</h4>
-                <h5>{DrinksCollection[currentSelection[1]].name}</h5>
+                {/* <h5>{DrinksCollection[currentSelection[1]].name}</h5> */}
               </div>
             </Grid>
           </Grid>

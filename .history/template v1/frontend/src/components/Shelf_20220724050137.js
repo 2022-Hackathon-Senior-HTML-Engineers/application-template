@@ -308,7 +308,7 @@ const Shelf = () => {
                       <div
                         className="grid-item"
                         onClick={() =>
-                          setCurrentSelection([].concat(currentSelection[0], [i]))
+                          console.log([].concat(currentSelection[0], [i]))
                         }
                       >
                         <Tooltip title={<h2>{Drink.name}</h2>}>
@@ -323,7 +323,7 @@ const Shelf = () => {
                   </div>
                 </div>
                 <h4>Currently selected drink:</h4>
-                <h5>{DrinksCollection[currentSelection[1]].name}</h5>
+                {/* <h5>{DrinksCollection[currentSelection[1]].name}</h5> */}
               </div>
             </Grid>
           </Grid>

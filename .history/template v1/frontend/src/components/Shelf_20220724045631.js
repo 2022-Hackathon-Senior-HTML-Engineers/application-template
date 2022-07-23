@@ -308,7 +308,9 @@ const Shelf = () => {
                       <div
                         className="grid-item"
                         onClick={() =>
-                          setCurrentSelection([].concat(currentSelection[0], [i]))
+                          setCurrentSelection(
+                             currentSelection[0, i]
+                          )
                         }
                       >
                         <Tooltip title={<h2>{Drink.name}</h2>}>
