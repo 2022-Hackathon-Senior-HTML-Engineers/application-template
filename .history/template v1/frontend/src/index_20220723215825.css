@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
 
 /* FONTS */
-h1, h2, h3 {
+h1 {
   margin: 0;
 }
 
@@ -187,10 +187,6 @@ input.error {
   height: 145px;
 }
 
-.task-box {
-  height: 60px;
-}
-
 .nav-left {
   text-align: center;
 
@@ -198,7 +194,7 @@ input.error {
 
 .nav-right {
 text-align: left;
-padding: 5px 0 0 9px;
+padding: 5px 0 0 8px;
 }
 
 .nav-container {

@@ -188,7 +188,7 @@ input.error {
 }
 
 .task-box {
-  height: 60px;
+  height: 50px;
 }
 
 .nav-left {
@@ -198,7 +198,7 @@ input.error {
 
 .nav-right {
 text-align: left;
-padding: 5px 0 0 9px;
+padding: 5px 0 0 8px;
 }
 
 .nav-container {
