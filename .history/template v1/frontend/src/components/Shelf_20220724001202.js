@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
-import { Tooltip } from "@mui/material";
+import Tooltip from "@mui/material";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
@@ -96,7 +96,7 @@ const Shelf = () => {
                     setCurrentTaskState(ShelfItem)
                   )}
                 >
-                  <Tooltip title={<h2>{DrinksCollection[ShelfItem].name}</h2>}>
+                  <Tooltip title={DrinksCollection[ShelfItem].imageName}>
                     <img
                       src={DrinksCollection[ShelfItem].imageName}
                       className=""
@@ -109,7 +109,7 @@ const Shelf = () => {
           </div>
         </div>
         <div className="machine-bottom">
-        {currentNavState ? <div><div/> : <Grid container spacing={0}>
+          <Grid container spacing={0}>
             <Grid item xs={6} md={4}>
               <div className="nav-left">
                 <img
@@ -136,8 +136,7 @@ const Shelf = () => {
                 />
               </div>
             </Grid>
-          </Grid>}
-          
+          </Grid>
         </div>
       </div>
 

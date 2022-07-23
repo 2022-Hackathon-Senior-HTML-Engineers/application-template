@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
-import { Tooltip } from "@mui/material";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
@@ -78,6 +77,12 @@ const Shelf = () => {
     setVisibility(e);
   };
 
+  const viewDetails = (id) => {
+    console.log(id);
+    // setCurrentItemState(id);
+    // setCurrentTaskState(ShelfItem);
+  };
+
   //   const removeTask = (e) => {
   //     /* To be implemented */
   //   };
@@ -92,24 +97,26 @@ const Shelf = () => {
                 <div
                   className="grid-item"
                   onClick={() => (
-                    setCurrentItemState(ShelfItem),
-                    setCurrentTaskState(ShelfItem)
+                    <>
+                      setCurrentItemState(ShelfItem);
+                      setCurrentTaskState(ShelfItem);
+                    </>
                   )}
                 >
-                  <Tooltip title={<h2>{DrinksCollection[ShelfItem].name}</h2>}>
-                    <img
-                      src={DrinksCollection[ShelfItem].imageName}
-                      className=""
-                      alt={DrinksCollection[ShelfItem].name}
-                    />
-                  </Tooltip>
+                  {/* onClick={viewDetails(ShelfItem)} */}
+                  <img
+                    src={DrinksCollection[ShelfItem].imageName}
+                    className=""
+                    alt={DrinksCollection[ShelfItem].name}
+                    onClick={viewDetails}
+                  />
                 </div>
               ))}
             </div>
           </div>
         </div>
         <div className="machine-bottom">
-        {currentNavState ? <div><div/> : <Grid container spacing={0}>
+          <Grid container spacing={0}>
             <Grid item xs={6} md={4}>
               <div className="nav-left">
                 <img
@@ -124,9 +131,9 @@ const Shelf = () => {
                 <img src={BackButton} className="back-button" />
                 <img src={FinishButton} className="finish-button" />
                 <div className="task-box">
-                  <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                    {TasksCollection[currentTaskState].title}
-                  </h5>
+                  <h4 style={{ marginTop: "8px", marginBottom: "8px" }}>
+                  {TasksCollection[setCurrentTaskState].title}
+                  </h4>
                 </div>
 
                 <img
@@ -136,8 +143,7 @@ const Shelf = () => {
                 />
               </div>
             </Grid>
-          </Grid>}
-          
+          </Grid>
         </div>
       </div>
 

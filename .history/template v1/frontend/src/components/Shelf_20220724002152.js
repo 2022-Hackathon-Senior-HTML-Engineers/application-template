@@ -109,7 +109,8 @@ const Shelf = () => {
           </div>
         </div>
         <div className="machine-bottom">
-        {currentNavState ? <div><div/> : <Grid container spacing={0}>
+        if (currentWelcomeState) {
+            return (<Grid container spacing={0}>
             <Grid item xs={6} md={4}>
               <div className="nav-left">
                 <img
@@ -136,7 +137,7 @@ const Shelf = () => {
                 />
               </div>
             </Grid>
-          </Grid>}
+          </Grid>)
           
         </div>
       </div>

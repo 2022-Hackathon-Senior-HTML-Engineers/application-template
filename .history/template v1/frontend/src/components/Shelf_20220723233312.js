@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
-import { Tooltip } from "@mui/material";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
@@ -21,20 +20,22 @@ import StrawberrySoju from "../images/drinks/strawberry-soju.png";
 import AppleSoju from "../images/drinks/apple-soju.png";
 import RedBull from "../images/drinks/red-bull.png";
 import YakultSoju from "../images/drinks/yakult-soju.png";
-import Corona from "../images/popUpDrinks/corona.png";
-import FireBall from "../images/popUpDrinks/fireball.png";
-import GingerBeer from "../images/popUpDrinks/gingerBeer.png";
-import UpNGo from "../images/popUpDrinks/upngo.png";
-import Vodka from "../images/popUpDrinks/vodka.png";
-import Tui from "../images/drinks/tui.png";
+import Corona from "../images/popUpDrinks/corona.png"
+import FireBall from "../images/popUpDrinks/fireball.png"
+import GingerBeer from "../images/popUpDrinks/gingerBeer.png"
+import UpNGo from "../images/popUpDrinks/upngo.png"
+import Vodka from "../images/popUpDrinks/vodka.png"
+import Tui from "../images/drinks/tui.png"
 
 const Shelf = () => {
   const [currentNavState, setCurrentNavState] =
     useRecoilState(currentShelfState);
 
-  const [currentItemState, setCurrentItemState] = useRecoilState(itemState);
+    const [currentItemState, setCurrentItemState] =
+    useRecoilState(itemState);
 
-  const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
+    const [currentTaskState, setCurrentTaskState] =
+    useRecoilState(taskState);
 
   const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
   const ShelfTasksCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
@@ -47,40 +48,41 @@ const Shelf = () => {
     { id: 4, name: "Tui", imageName: Tui },
   ];
 
-  const TasksCollection = [
-    { id: 0, title: "You hear the lecturer's catch phrase." },
-    { id: 1, title: "Survive 20 minutes without having a drink." },
-    { id: 2, title: "Learn 3 new concepts." },
-    { id: 3, title: "Work with a new equation." },
-    {
-      id: 4,
-      title: 'The lecturer asks "Any questions?" and no questions are asked.',
-    },
-    { id: 5, title: "The lecturer makes a typo." },
-    { id: 6, title: "Go through 10 lecture slides." },
-    { id: 7, title: "You hear classroom claps in the background." },
-    { id: 8, title: "The professor stutters." },
-    { id: 9, title: "Plays a youtube video with less than 60 likes." },
-    { id: 10, title: "Repeats the same word at least 3 times in a row." },
-    { id: 11, title: "Has a full lag moment." },
-    { id: 12, title: "Shit talks another department." },
-    { id: 13, title: "Teaches data structures and algorithms." },
-    {
-      id: 14,
-      title: "Has a promotion for something at the start of the lecture.",
-    },
-    { id: 15, title: "Lecturer forgets to record video. It's audio only." },
-    { id: 16, title: "Lecturer forgot to turn up to lecture." },
-  ];
+const TasksCollection = [
+    { id: 0, title: "You hear the lecturer's catch phrase."},
+    { id: 1, title: "Survive 20 minutes without having a drink."},
+    { id: 2, title: "Learn 3 new concepts."},
+    { id: 3, title: "Work with a new equation."},
+    { id: 4, title: "The lecturer asks \"Any questions?\" and no questions are asked."},
+    { id: 5, title: "The lecturer makes a typo."},
+    { id: 6, title: "Go through 10 lecture slides."},
+    { id: 7, title: "You hear classroom claps in the background."},
+    { id: 8, title: "The professor stutters."},
+    { id: 9, title: "Plays a youtube video with less than 60 likes."},
+    { id: 10, title: "Repeats the same word at least 3 times in a row."},
+    { id: 11, title: "Has a full lag moment."},
+    { id: 12, title: "Shit talks another department."},
+    { id: 13, title: "Teaches data structures and algorithms."},
+    { id: 14, title: "Has a promotion for something at the start of the lecture."},
+    { id: 15, title: "Lecturer forgets to record video. It's audio only."},
+    { id: 16, title: "Lecturer forgot to turn up to lecture."},
+]
 
   const [visibility, setVisibility] = useState(false);
   const popupCloseHandler = (e) => {
     setVisibility(e);
   };
 
-  //   const removeTask = (e) => {
-  //     /* To be implemented */
-  //   };
+  const viewDetails = (e) => {
+    console.log(e);
+    // setCurrentItemState(e);
+    // setCurrentTaskState(e);
+  };
+
+//   const removeTask = (e) => {
+//     /* To be implemented */
+//   };
+
 
   return (
     <div>
@@ -89,44 +91,37 @@ const Shelf = () => {
           <div className="grid-parent">
             <div className="grid-container">
               {ShelfItemsCollection.map((ShelfItem) => (
-                <div
-                  className="grid-item"
-                  onClick={() => (
-                    setCurrentItemState(ShelfItem),
-                    setCurrentTaskState(ShelfItem)
-                  )}
-                >
-                  <Tooltip title={<h2>{DrinksCollection[ShelfItem].name}</h2>}>
-                    <img
-                      src={DrinksCollection[ShelfItem].imageName}
-                      className=""
-                      alt={DrinksCollection[ShelfItem].name}
-                    />
-                  </Tooltip>
+                <div className="grid-item" onClick={viewDetails(e)}>
+                {/* onClick={viewDetails(ShelfItem)} */}
+                  <img
+                    src={DrinksCollection[ShelfItem].imageName}
+                    className=""
+                    alt={DrinksCollection[ShelfItem].name}
+                  />
                 </div>
               ))}
             </div>
           </div>
         </div>
         <div className="machine-bottom">
-        {currentNavState ? <div><div/> : <Grid container spacing={0}>
+          <Grid container spacing={0}>
             <Grid item xs={6} md={4}>
               <div className="nav-left">
-                <img
-                  src={DrinksCollection[currentItemState].imageName}
-                  className=""
-                  alt="SDJKF"
-                />
+              <img
+                    src={DrinksCollection[currentItemState].imageName}
+                    className=""
+                    alt="SDJKF"
+                  />
               </div>
             </Grid>
             <Grid item xs={6} md={8}>
               <div className="nav-right">
                 <img src={BackButton} className="back-button" />
-                <img src={FinishButton} className="finish-button" />
+                <img src={FinishButton} className="finish-button"/>
                 <div className="task-box">
-                  <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                    {TasksCollection[currentTaskState].title}
-                  </h5>
+                  <h4 style={{ "margin-top": "8px", "margin-bottom": "8px" }}>
+                    YOUR CURRENT TASK HERE
+                  </h4>
                 </div>
 
                 <img
@@ -136,8 +131,7 @@ const Shelf = () => {
                 />
               </div>
             </Grid>
-          </Grid>}
-          
+          </Grid>
         </div>
       </div>
 
@@ -156,6 +150,7 @@ const Shelf = () => {
         <img src={UpNGo} className="grid-item" />
         <img src={Vodka} className="grid-item" />
         <img src={Tui} className="grid-item" />
+
       </DetailsPopup>
     </div>
   );
