@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
 import { Tooltip } from "@mui/material";
-import { useState } from "react";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
@@ -10,6 +9,7 @@ import { taskState } from "../atoms/currentTaskState";
 
 import DetailsPopup from "../components/DetailsPopup";
 import CustomPopup from "../components/CustomPopup";
+import { useState } from "react";
 import Juice from "../images/popUpDrinks/juice.png";
 import MountGay from "../images/popUpDrinks/mountGay.png";
 
@@ -46,25 +46,26 @@ const Shelf = () => {
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
 
 
-  const ShelfItemsCollection=[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
-//   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const [ShelfItemsCollection, setShelfItemsCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
 
   const DrinksCollection = [
     { id: 0, name: "Original Soju", imageName: OriginalSoju },
-    { id: 1, name: "Grape Soju", imageName: GrapeSoju },
-    { id: 2, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 3, name: "Apple Soju", imageName: AppleSoju },
-    { id: 4, name: "Yakult Soju", imageName: YakultSoju },
-    { id: 5, name: "Vodka", imageName: Vodka },
-    { id: 6, name: "Tui", imageName: Tui },
-    { id: 7, name: "Corona", imageName: Corona },
-    { id: 8, name: "MountGay", imageName: MountGay },
-    { id: 9, name: "Fireball", imageName: FireBall },
-    { id: 10, name: "Pepsi", imageName: Pepsi },
-    { id: 11, name: "Red Bull", imageName: RedBull },
-    { id: 12, name: "Juice", imageName: Juice },
-    { id: 13, name: "Ginger Beer", imageName: StrawberrySoju },
-    { id: 14, name: "Up & Go", imageName: UpNGo },
+    { id: 0, name: "Grape Soju", imageName: GrapeSoju },
+    { id: 0, name: "Strawberry Soju", imageName: StrawberrySoju },
+    { id: 1, name: "Apple Soju", imageName: AppleSoju },
+    { id: 0, name: "Yakult Soju", imageName: YakultSoju },
+    { id: 0, name: "Vodka", imageName: Vodka },
+    { id: 4, name: "Tui", imageName: Tui },
+    { id: 0, name: "Corona", imageName: Corona },
+    { id: 0, name: "MountGay", imageName: MountGay },
+    { id: 0, name: "Fireball", imageName: Fireball },
+    { id: 0, name: "Pepsi", imageName: Pepsi },
+    { id: 2, name: "Red Bull", imageName: RedBull },
+    { id: 0, name: "Juice", imageName: Juice },
+    { id: 0, name: "Ginger Beer", imageName: StrawberrySoju },
+    { id: 0, name: "Up & Go", imageName: UpNGo },
+    
   ];
 
   const TasksCollection = [

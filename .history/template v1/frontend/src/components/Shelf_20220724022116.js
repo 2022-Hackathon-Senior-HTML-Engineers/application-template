@@ -46,8 +46,8 @@ const Shelf = () => {
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
 
 
-  const ShelfItemsCollection=[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
-//   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const [ShelfItemsCollection, setShelfItemsCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
 
   const DrinksCollection = [
     { id: 0, name: "Original Soju", imageName: OriginalSoju },

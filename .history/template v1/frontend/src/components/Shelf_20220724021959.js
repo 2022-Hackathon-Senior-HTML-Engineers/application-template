@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
 import { Tooltip } from "@mui/material";
-import { useState } from "react";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
@@ -10,6 +9,7 @@ import { taskState } from "../atoms/currentTaskState";
 
 import DetailsPopup from "../components/DetailsPopup";
 import CustomPopup from "../components/CustomPopup";
+import { useState } from "react";
 import Juice from "../images/popUpDrinks/juice.png";
 import MountGay from "../images/popUpDrinks/mountGay.png";
 
@@ -46,8 +46,8 @@ const Shelf = () => {
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
 
 
-  const ShelfItemsCollection=[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
-//   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const [ShelfItemsCollection, setShelfItemsCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
 
   const DrinksCollection = [
     { id: 0, name: "Original Soju", imageName: OriginalSoju },

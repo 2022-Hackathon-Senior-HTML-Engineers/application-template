@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
 import { Tooltip } from "@mui/material";
-import { useState } from "react";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
@@ -10,6 +9,7 @@ import { taskState } from "../atoms/currentTaskState";
 
 import DetailsPopup from "../components/DetailsPopup";
 import CustomPopup from "../components/CustomPopup";
+import { useState } from "react";
 import Juice from "../images/popUpDrinks/juice.png";
 import MountGay from "../images/popUpDrinks/mountGay.png";
 
@@ -35,7 +35,6 @@ import Vodka from "../images/popUpDrinks/vodka.png";
 import Tui from "../images/drinks/tui.png";
 import OriginalSoju from "../images/drinks/original-soju.png";
 import GrapeSoju from "../images/drinks/grape-soju.png";
-import Pepsi from "../images/drinks/pepsi.png";
 
 const Shelf = () => {
   const [currentNavState, setCurrentNavState] =
@@ -45,26 +44,15 @@ const Shelf = () => {
 
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
 
-
-  const ShelfItemsCollection=[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
-//   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const ShelfTasksCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
 
   const DrinksCollection = [
-    { id: 0, name: "Original Soju", imageName: OriginalSoju },
-    { id: 1, name: "Grape Soju", imageName: GrapeSoju },
-    { id: 2, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 3, name: "Apple Soju", imageName: AppleSoju },
-    { id: 4, name: "Yakult Soju", imageName: YakultSoju },
-    { id: 5, name: "Vodka", imageName: Vodka },
-    { id: 6, name: "Tui", imageName: Tui },
-    { id: 7, name: "Corona", imageName: Corona },
-    { id: 8, name: "MountGay", imageName: MountGay },
-    { id: 9, name: "Fireball", imageName: FireBall },
-    { id: 10, name: "Pepsi", imageName: Pepsi },
-    { id: 11, name: "Red Bull", imageName: RedBull },
-    { id: 12, name: "Juice", imageName: Juice },
-    { id: 13, name: "Ginger Beer", imageName: StrawberrySoju },
-    { id: 14, name: "Up & Go", imageName: UpNGo },
+    { id: 0, name: "Strawberry Soju", imageName: StrawberrySoju },
+    { id: 1, name: "Apple Soju", imageName: AppleSoju },
+    { id: 2, name: "Red Bull", imageName: RedBull },
+    { id: 3, name: "Yakult Soju", imageName: YakultSoju },
+    { id: 4, name: "Tui", imageName: Tui },
   ];
 
   const TasksCollection = [
@@ -136,72 +124,77 @@ const Shelf = () => {
         </div>
         <div className="machine-bottom">
           {currentNavState ? (
-            <>
-              <Grid container spacing={0}>
-                <Grid item xs={6} md={4}>
-                  <div className="nav-left">
-                    <img
-                      src={DrinksCollection[currentItemState].imageName}
-                      className=""
-                      alt="SDJKF"
-                    />
-                  </div>
-                </Grid>
-                <Grid item xs={6} md={8}>
-                  <div className="nav-right">
-                    <img
-                      src={BackButton}
-                      className="back-button"
-                      onClick={(e) => setCurrentNavState(!currentNavState)}
-                    />
-                    <img src={FinishButton} className="finish-button" />
-                    <div className="task-box">
-                      <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                        {TasksCollection[currentTaskState].title}
-                      </h5>
-                    </div>
-
-                    <img
-                      src={DetailsButton}
-                      className="details-button"
-                      onClick={(e) => setVisibilityDetails(!visibilityDetails)}
-                    />
-                  </div>
-                </Grid>
+            <><Grid container spacing={0}>
+              <Grid item xs={6} md={4}>
+                <div className="nav-left">
+                  <img
+                    src={DrinksCollection[currentItemState].imageName}
+                    className=""
+                    alt="SDJKF"
+                  />
+                </div>
               </Grid>
-            </>
-          ) : (
-            <>
-              <div>
-                <Grid container spacing={0}>
-                  <Grid item xs={6} md={4}>
-                    <div className="nav-left-2">
-                      <img src={User} className="" />
-                      <br />
-                      <img src={ProfileButton} className="nav-button" />
-                      <br />
-                      <img src={LogOutButton} className="nav-button" />
-                    </div>
-                  </Grid>
-                  <Grid item xs={6} md={8}>
-                    <div className="nav-right-2">
-                      <img src={LecturesButton} className="nav-button" />
-                      <img
-                        src={SetTasksButton}
-                        className="nav-button"
-                        onClick={(e) => setVisibilityTasks(!visibilityTasks)}
-                      />
-                      <img
-                        src={ResumeLastVideoButton}
-                        className="nav-button"
-                        onClick={(e) => setCurrentNavState(!currentNavState)}
-                      />
-                    </div>
-                  </Grid>
-                </Grid>
-              </div>
-            </>
-          )}
+              <Grid item xs={6} md={8}>
+                <div className="nav-right">
+                  <img src={BackButton} className="back-button" onClick={(e) => setCurrentNavState(!currentNavState)}/>
+                  <img src={FinishButton} className="finish-button" />
+                  <div className="task-box">
+                    <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
+                      {TasksCollection[currentTaskState].title}
+                    </h5>
+                  </div>
+
+                  <img
+                    src={DetailsButton}
+                    className="details-button"
+                    onClick={(e) => setVisibilityDetails(!visibilityDetails)}
+                  />
+                </div>
+              </Grid>
+            </Grid></>
+          ) : <>
+
+<div>
+<Grid container spacing={0}>
+              <Grid item xs={6} md={4}>
+                <div className="nav-left-2">
+                <img
+                    src={User}
+                    className=""
+                  /><br/>
+                  <img
+                    src={ProfileButton}
+                    className="nav-button"
+                  /><br/>
+                  <img
+                    src={LogOutButton}
+                    className="nav-button"
+                  />
+                </div>
+              </Grid>
+              <Grid item xs={6} md={8}>
+                <div className="nav-right-2">
+                <img
+                    src={LecturesButton}
+                    className="nav-button"
+                  />
+                  <img
+                    src={SetTasksButton}
+                    className="nav-button"
+                    onClick={(e) => setVisibilityTasks(!visibilityTasks)}
+                  />
+                  <img
+                    src={ResumeLastVideoButton}
+                    className="nav-button"
+onClick={(e) => setCurrentNavState(!currentNavState)}
+                  />
+                </div>
+              </Grid>
+            </Grid>
+
+</div>
+
+          </>}
         </div>
       </div>
 
@@ -227,25 +220,20 @@ const Shelf = () => {
         show={visibilityTasks}
         title="Set Tasks"
       >
-
-      <div></div>
-        <div className="drinks-list">
-          <img src={OriginalSoju} className="grid-item" />
-          <img src={GrapeSoju} className="grid-item" />
-          <img src={StrawberrySoju} className="grid-item" />
-          <img src={AppleSoju} className="grid-item" />
-          <img src={YakultSoju} className="grid-item" />
-          <img src={Vodka} className="grid-item" />
-          <img src={Tui} className="grid-item" />
-          <img src={Corona} className="grid-item" />
-          <img src={MountGay} className="grid-item" />
-          <img src={FireBall} className="grid-item" />
-          <img src={Pepsi} className="grid-item" />
-          <img src={RedBull} className="grid-item" />
-          <img src={Juice} className="grid-item" />
-          <img src={GingerBeer} className="grid-item" />
-          <img src={UpNGo} className="grid-item" />
-        </div>
+      <img src={OriginalSoju} className="grid-item" />
+      <img src={GrapeSoju} className="grid-item" />
+        <img src={StrawberrySoju} className="grid-item" />
+        <img src={AppleSoju} className="grid-item" />
+        <img src={YakultSoju} className="grid-item" />
+        <img src={Vodka} className="grid-item" />
+        <img src={Tui} className="grid-item" />
+        <img src={Corona} className="grid-item" />
+        <img src={MountGay} className="grid-item" />
+        <img src={FireBall} className="grid-item" />
+        <img src={RedBull} className="grid-item" />
+        <img src={Juice} className="grid-item" />
+        <img src={GingerBeer} className="grid-item" />
+        <img src={UpNGo} className="grid-item" />
       </DetailsPopup>
     </div>
   );
