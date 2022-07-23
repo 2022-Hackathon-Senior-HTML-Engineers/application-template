@@ -12,7 +12,6 @@ import MountGay from "../images/popUpDrinks/mountGay.png";
 
 import BackButton from "../images/back-button.png";
 import DetailsButton from "../images/details-button.png";
-import FinishButton from "../images/finish-button.png";
 
 import StrawberrySoju from "../images/drinks/strawberry-soju.png";
 import AppleSoju from "../images/drinks/apple-soju.png";
@@ -64,14 +63,13 @@ const Shelf = () => {
               <img
                     src={StrawberrySoju}
                     className=""
-                    alt="SDJKF"
+                    alt="SDJKF""
                   />
               </div>
             </Grid>
             <Grid item xs={6} md={8}>
               <div className="nav-right">
                 <img src={BackButton} className="back-button" />
-                <img src={FinishButton} className="finish-button" />
                 <div className="task-box">
                   <h4 style={{ "margin-top": "8px", "margin-bottom": "8px" }}>
                     YOUR CURRENT TASK HERE

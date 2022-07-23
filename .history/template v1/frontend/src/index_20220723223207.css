@@ -218,14 +218,6 @@ opacity: 0.6;
 cursor: pointer;
 }
 
-.finish-button {
-opacity: 1;
-}
-
-.finish-button:hover {
-  opacity: 0.6;
-}
-
 .details-button {
 
 }
