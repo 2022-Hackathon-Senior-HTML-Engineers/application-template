@@ -57,16 +57,16 @@ const Home = () => {
         show={visibility}
         title="Drinks"
       >
-        <img src={Soju} />
-        <img src={Juice} />
-        <img src={RedBull} />
-        <img src={MountGay} />
-        <img src={Corona} />
-        <img src={FireBall} />
-        <img src={GingerBeer} />
-        <img src={UpNGo} />
-        <img src={Vodka} />
-        <img src={Tui} />
+        <img src={Soju} className="grid-item" />
+        <img src={Juice} className="grid-item" />
+        <img src={RedBull} className="grid-item" />
+        <img src={MountGay} className="grid-item" />
+        <img src={Corona} className="grid-item" />
+        <img src={FireBall} className="grid-item" />
+        <img src={GingerBeer} className="grid-item" />
+        <img src={UpNGo} className="grid-item" />
+        <img src={Vodka} className="grid-item" />
+        <img src={Tui} className="grid-item" />
 
       </CustomPopup>
       <button className="drinks-button" onClick={(e) => setVisibility(!visibility)} >What drinks do you want?</button>
