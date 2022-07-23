@@ -54,9 +54,12 @@ const Shelf = () => {
                 <div className="grid-item">
                   <img
                     src={DrinksCollection[ShelfItem].imageName}
-                    className=""
+                    className="image"
                     alt={DrinksCollection[ShelfItem].name}
                   />
+                  <div className="overlay">
+                    <div className="text">{DrinksCollection[ShelfItem].name}</div>
+                  </div>
                 </div>
               ))}
             </div>
