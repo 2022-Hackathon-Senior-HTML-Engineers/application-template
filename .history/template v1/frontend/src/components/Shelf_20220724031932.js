@@ -150,7 +150,7 @@ const Shelf = () => {
                   <div className="nav-left">
                   {console.log(DrinksCollection[currentItemState])}
                     <img
-                      src={DrinksCollection[ShelfItemsCollection[currentItemState]].imageName}
+                      src={DrinksCollection[ShelfItemCollection[currentItemState]].imageName}
                       className=""
                       alt="SDJKF"
                     />

@@ -48,7 +48,7 @@ const Shelf = () => {
 
   const [ShelfItemsCollection, setShelfItemsCollection] = useState([4, 2, 1, 0, 1, 3, 4,15,15,15,15,15,15,15,15,15]);
 //   const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
-     const [ShelfTasksCollection, setShelfTasksCollection] = useState([4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3]);
+  //   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
 
   const DrinksCollection = [
     { id: 0, name: "Original Soju", imageName: OriginalSoju },
@@ -122,12 +122,12 @@ const Shelf = () => {
         <div className="items-window">
           <div className="grid-parent">
             <div className="grid-container">
-              {ShelfItemsCollection.map((ShelfItem, i) => (
+              {ShelfItemsCollection.map((ShelfItem) => (
                 <div
                   className="grid-item"
                   onClick={() => (
-                    setCurrentItemState(i),
-                    setCurrentTaskState(i)
+                    setCurrentItemState(ShelfItem),
+                    setCurrentTaskState(ShelfItem)
                   )}
                 >
                   <Tooltip title={<h2>{DrinksCollection[ShelfItem].name}</h2>}>
@@ -150,7 +150,7 @@ const Shelf = () => {
                   <div className="nav-left">
                   {console.log(DrinksCollection[currentItemState])}
                     <img
-                      src={DrinksCollection[ShelfItemsCollection[currentItemState]].imageName}
+                      src={DrinksCollection[currentItemState].imageName}
                       className=""
                       alt="SDJKF"
                     />
@@ -166,7 +166,7 @@ const Shelf = () => {
                     <img src={FinishButton} className="finish-button" />
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                        {TasksCollection[ShelfTasksCollection[currentTaskState]].title}
+                        {TasksCollection[currentTaskState].title}
                       </h5>
                     </div>
 
@@ -243,7 +243,7 @@ const Shelf = () => {
                 
               <div
                 className="grid-item"
-                onClick={() =>  setShelfItemsCollection([Drink.id].concat(ShelfItemsCollection.slice(0,15))) }
+                onClick={() =>  setShelfItemsCollection(arr => [...arr, `${arr.length}`]) }
                 // onClick={() => (ShelfItemsCollection.pop(),console.log("removed"),ShelfItemsCollection.unshift(Drink.id),console.log("added "+ Drink.id.toString())
                 // )}
               >

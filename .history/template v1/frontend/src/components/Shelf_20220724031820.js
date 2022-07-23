@@ -150,7 +150,7 @@ const Shelf = () => {
                   <div className="nav-left">
                   {console.log(DrinksCollection[currentItemState])}
                     <img
-                      src={DrinksCollection[ShelfItemsCollection[currentItemState]].imageName}
+                      src={DrinksCollection[currentItemState].imageName}
                       className=""
                       alt="SDJKF"
                     />
@@ -166,7 +166,7 @@ const Shelf = () => {
                     <img src={FinishButton} className="finish-button" />
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                        {TasksCollection[ShelfTasksCollection[currentTaskState]].title}
+                        {TasksCollection[currentTaskState].title}
                       </h5>
                     </div>
 

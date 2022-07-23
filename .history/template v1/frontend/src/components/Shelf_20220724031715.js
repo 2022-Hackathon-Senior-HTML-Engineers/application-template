@@ -48,7 +48,7 @@ const Shelf = () => {
 
   const [ShelfItemsCollection, setShelfItemsCollection] = useState([4, 2, 1, 0, 1, 3, 4,15,15,15,15,15,15,15,15,15]);
 //   const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
-     const [ShelfTasksCollection, setShelfTasksCollection] = useState([4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3]);
+  //   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
 
   const DrinksCollection = [
     { id: 0, name: "Original Soju", imageName: OriginalSoju },
@@ -150,7 +150,7 @@ const Shelf = () => {
                   <div className="nav-left">
                   {console.log(DrinksCollection[currentItemState])}
                     <img
-                      src={DrinksCollection[ShelfItemsCollection[currentItemState]].imageName}
+                      src={DrinksCollection[currentItemState].imageName}
                       className=""
                       alt="SDJKF"
                     />
@@ -166,7 +166,7 @@ const Shelf = () => {
                     <img src={FinishButton} className="finish-button" />
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                        {TasksCollection[ShelfTasksCollection[currentTaskState]].title}
+                        {TasksCollection[currentTaskState].title}
                       </h5>
                     </div>
 
