@@ -45,18 +45,21 @@ const YoutubeVideo = () => {
           </div>
         </Grid>
         <Grid item xs={4}>
-          <div className="notepad-section">
-
+          <div className="video-title-section">
+            <h3>You're currently watching:</h3>
+            <br />
+            <h2>
+              AofA Lecture 28: Running time for Dijkstra and when Dijkstra fails
+            </h2>
           </div>
         </Grid>
         <Grid item xs={4}>
-          <div className="drawing-pad-section">
-
-          </div>
-        </Grid>
-        <Grid item xs={4}>
-          <div className="stopwatch-section">
-
+          <div className="video-title-section">
+            <h3>You're currently watching:</h3>
+            <br />
+            <h2>
+              AofA Lecture 28: Running time for Dijkstra and when Dijkstra fails
+            </h2>
           </div>
         </Grid>
       </Grid>
