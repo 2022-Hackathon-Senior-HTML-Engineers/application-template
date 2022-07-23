@@ -201,7 +201,7 @@ bottom: 45px;
 
 .nav-right {
   text-align: left;
-  padding: 5px 0 0 14px;
+  padding: 5px 0 0 9px;
 }
 
 .nav-container {
@@ -220,7 +220,7 @@ bottom: 45px;
 }
 
 .finish-button {
-margin-left: 83px;
+margin-left: 20px;
 }
 
 .finish-button:hover {
