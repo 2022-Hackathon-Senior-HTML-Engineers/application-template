@@ -1,0 +1,152 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+
+/* new workout form */
+label,
+input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* SHELF */
+
+/* SPLIT */
+.shelf-container {
+  background-color: red;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* SHELF SIDES */
+.shelf-sides {
+  
+}
+
+
+/* SHELF ITEMS */
+.items-window {
+  margin: 5% 7% 5% 7%;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+}
+
+/* GRID */
+
+.grid-parent {
+  background-color: lightblue;
+  margin: 0 10% 0 10%;
+  border-radius: 15px;
+  padding-bottom: 5%;
+}
+
+.grid-container {
+  margin: auto;
+  width: 355px;
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  /* background-color: #2196F3; */
+  padding: 15px 5px 0 5px;
+  grid-gap: 10px;
+  border-bottom: 5px solid white;
+}
+
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8); */
+  height: 100px;
+  width: 80px;
+  padding: 0px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.grid-item:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* NAVIGATION SECTION */
+.nav-container {
+  text-align: center;
+}
+
+.nav-button {
+  margin: 0 auto;
+}
+
+/* CONTENT */
+
+/* SPLIT */
+.content-container {
+  background-color: blue;
+  height: 100vh;
+  overflow: hidden;
+}
