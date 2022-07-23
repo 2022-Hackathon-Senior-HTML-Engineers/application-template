@@ -163,7 +163,7 @@ const Shelf = () => {
                       className="back-button"
                       onClick={(e) => setCurrentNavState(!currentNavState)}
                     />
-                    <img src={FinishButton} className="finish-button" onClick={() => setShelfItemsCollection([].concat(ShelfItemsCollection.slice(0,currentItemState),ShelfItemsCollection.slice(currentItemState+1, 16),[15]))}/>
+                    <img src={FinishButton} className="finish-button" onClick={() => [].concat(ShelfItemsCollection.slice(0,currentTaskState),ShelfItemsCollection.slice(currentTaskState, 14)}/>
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
                         {TasksCollection[ShelfTasksCollection[currentTaskState]].title}
