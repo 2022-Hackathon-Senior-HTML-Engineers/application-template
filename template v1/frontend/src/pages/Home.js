@@ -14,7 +14,7 @@ const Home = () => {
       const json = await response.json()
 
       if (response.ok) {
-        dispatch({type: 'SET_DRINKS', payload: json})
+        dispatch({ type: 'SET_DRINKS', payload: json })
       }
     }
 
@@ -29,8 +29,20 @@ const Home = () => {
         ))}
       </div>
       <DrinkForm />
+      <CustomPopup
+        onClose={popupCloseHandler}
+        show={visibility}
+        title="Drinks"
+      >
+        <img src={Soju} />
+        <img src={Juice} />
+        <img src={RedBull} />
+        <img src={MountGay} />
+
+
+      </CustomPopup>
+      <button className="drinks-button" onClick={(e) => setVisibility(!visibility)} >What drinks do you want?</button>
     </div>
   )
 }
-
 export default Home
