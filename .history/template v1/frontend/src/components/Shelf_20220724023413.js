@@ -36,7 +36,6 @@ import Tui from "../images/drinks/tui.png";
 import OriginalSoju from "../images/drinks/original-soju.png";
 import GrapeSoju from "../images/drinks/grape-soju.png";
 import Pepsi from "../images/drinks/pepsi.png";
-import NoDrink from "../images/drinks/no-drink.png";
 
 const Shelf = () => {
   const [currentNavState, setCurrentNavState] =
@@ -46,8 +45,7 @@ const Shelf = () => {
 
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
 
-  const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4,15,15,15,15,15,15,15,15,15];
-//   const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
+  const ShelfItemsCollection = [4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
   //   const [ShelfTasksCollection, setShelfTasksCollection] = useState[4, 2, 1, 0, 1, 3, 4, 0, 4, 1, 0, 1, 2, 0, 2, 3];
 
   const DrinksCollection = [
@@ -64,9 +62,8 @@ const Shelf = () => {
     { id: 10, name: "Pepsi", imageName: Pepsi },
     { id: 11, name: "Red Bull", imageName: RedBull },
     { id: 12, name: "Juice", imageName: Juice },
-    { id: 13, name: "Ginger Beer", imageName: GingerBeer },
+    { id: 13, name: "Ginger Beer", imageName: StrawberrySoju },
     { id: 14, name: "Up & Go", imageName: UpNGo },
-    { id: 15, name: "No Drink", imageName: NoDrink },
   ];
 
   const TasksCollection = [
@@ -142,7 +139,6 @@ const Shelf = () => {
               <Grid container spacing={0}>
                 <Grid item xs={6} md={4}>
                   <div className="nav-left">
-                  {console.log(DrinksCollection[currentItemState])}
                     <img
                       src={DrinksCollection[currentItemState].imageName}
                       className=""
@@ -233,13 +229,13 @@ const Shelf = () => {
         <div></div>
         <div className="drinks-list">
           <div className="grid-container-drinks-list">
-            {DrinksCollection.slice(0, 15).map((Drink) => (
+            {DrinksCollection.map((Drink) => (
                 
               <div
                 className="grid-item"
-                // onClick={() => (
-                  
-                // )}
+                onClick={() => (
+                  setCurrentItemState(Drink), setCurrentTaskState(Drink)
+                )}
               >
                 <Tooltip title={<h2>{Drink.name}</h2>}>
                   <img

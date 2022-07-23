@@ -155,7 +155,7 @@ input.error {
 
 .grid-container {
   margin: auto;
-  height: 460px;
+  height: 465px;
   width: 355px;
   display: grid;
   grid-template-columns: 80px 80px 80px 80px;
@@ -203,16 +203,16 @@ input.error {
 }
 
 .nav-left {
-  position: absolute;
-  left: 113px;
-  bottom: 45px;
+position: absolute;
+left: 113px;
+bottom: 45px;
 }
 
 .nav-left-2 {
   position: absolute;
-  left: 113px;
-  bottom: 45px;
-  margin-left: 8.5px;
+left: 113px;
+bottom: 45px;
+margin-left: 8.5px;
 }
 
 .nav-right {
@@ -239,8 +239,7 @@ input.error {
   cursor: pointer;
 }
 
-.back-button {
-}
+.back-button {}
 
 .back-button:hover {
   opacity: 0.6;
@@ -248,7 +247,7 @@ input.error {
 }
 
 .finish-button {
-  margin-left: 83px;
+margin-left: 83px;
 }
 
 .finish-button:hover {
@@ -256,7 +255,9 @@ input.error {
 }
 
 .details-button {
+
 }
+
 
 .details-button:hover {
   opacity: 0.6;
