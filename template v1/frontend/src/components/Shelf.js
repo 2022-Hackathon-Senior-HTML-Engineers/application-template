@@ -17,7 +17,12 @@ import StrawberrySoju from "../images/drinks/strawberry-soju.png";
 import AppleSoju from "../images/drinks/apple-soju.png";
 import RedBull from "../images/drinks/red-bull.png";
 import YakultSoju from "../images/drinks/yakult-soju.png";
-import Tui from "../images/drinks/tui.png";
+import Corona from "../images/popUpDrinks/corona.png"
+import FireBall from "../images/popUpDrinks/fireball.png"
+import GingerBeer from "../images/popUpDrinks/gingerBeer.png"
+import UpNGo from "../images/popUpDrinks/upngo.png"
+import Vodka from "../images/popUpDrinks/vodka.png"
+import Tui from "../images/drinks/tui.png"
 
 const Shelf = () => {
   const [currentNavState, setCurrentNavState] =
@@ -88,10 +93,16 @@ const Shelf = () => {
         show={visibility}
         title="Drinks"
       >
-        <img src={Soju} />
-        <img src={Juice} />
-        <img src={RedBull} />
-        <img src={MountGay} />
+        <img src={Soju} className="grid-item" />
+        <img src={Juice} className="grid-item" />
+        <img src={RedBull} className="grid-item" />
+        <img src={MountGay} className="grid-item" />
+        <img src={Corona} className="grid-item" />
+        <img src={FireBall} className="grid-item" />
+        <img src={GingerBeer} className="grid-item" />
+        <img src={UpNGo} className="grid-item" />
+        <img src={Vodka} className="grid-item" />
+        <img src={Tui} className="grid-item" />
       </DetailsPopup>
     </div>
   );
