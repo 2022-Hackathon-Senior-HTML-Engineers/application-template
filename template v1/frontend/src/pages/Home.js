@@ -6,7 +6,17 @@ import Juice from "../images/juice.png"
 import MountGay from "../images/mountGay.png"
 import RedBull from "../images/redBull.png"
 import YoutubeEmbed from "../components/YoutubeEmbed";
-
+import Soju from "../images/popUpDrinks/soju.png"
+import Juice from "../images/popUpDrinks/juice.png"
+import MountGay from "../images/popUpDrinks/mountGay.png"
+import RedBull from "../images/popUpDrinks/redBull.png"
+import Corona from "../images/popUpDrinks/corona.png"
+import FireBall from "../images/popUpDrinks/fireball.png"
+import GingerBeer from "../images/popUpDrinks/gingerBeer.png"
+import UpNGo from "../images/popUpDrinks/upngo.png"
+import Vodka from "../images/popUpDrinks/vodka.png"
+import Tui from "../images/drinks/tui.png"
+import Yakult from "../images/drinks/yakult-soju.png"
 import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
 
@@ -24,7 +34,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchDrinks = async () => {
-      const response = await fetch('/api/drinks')
+      const response = await fetch('https://localhost:20522/api/drinks')
       const json = await response.json()
 
       if (response.ok) {
@@ -56,6 +66,13 @@ const Home = () => {
         <img src={Juice} />
         <img src={RedBull} />
         <img src={MountGay} />
+        <img src={Corona} />
+        <img src={FireBall} />
+        <img src={GingerBeer} />
+        <img src={UpNGo} />
+        <img src={Vodka} />
+        <img src={Tui} />
+        <img src={Yakult} />
 
 
       </CustomPopup>

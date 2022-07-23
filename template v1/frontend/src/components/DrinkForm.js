@@ -15,7 +15,7 @@ const DrinkForm = () => {
 
     const Drink = {title, load, reps}
     
-    const response = await fetch('/api/Drinks', {
+    const response = await fetch('https://localhost:20522/api/drinks', {
       method: 'POST',
       body: JSON.stringify(Drink),
       headers: {
