@@ -14,7 +14,7 @@ const Shelf = () => {
   //   ];
 
   const ShelfItemsCollection = [
-    0,1,1,0,1,1,1,0,0,1,0,1,0,0,1,1
+    0,1,1,0,1,1,1
   ];
 
   const DrinksCollection = [
@@ -36,6 +36,7 @@ const Shelf = () => {
                     className=""
                     alt={DrinksCollection[ShelfItem].name}
                   />
+                  <h2>{DrinksCollection[1].name}</h2>
                 </div>
               ))}
             </div>

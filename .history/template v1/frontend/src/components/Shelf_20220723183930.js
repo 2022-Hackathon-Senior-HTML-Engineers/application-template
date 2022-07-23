@@ -14,12 +14,12 @@ const Shelf = () => {
   //   ];
 
   const ShelfItemsCollection = [
-    0,1,1,0,1,1,1,0,0,1,0,1,0,0,1,1
+    1,2,1,2,1,2,1,2,1,2,2,2,2
   ];
 
   const DrinksCollection = [
-    { id: 0, name: "Strawberry Soju", imageName: StrawberrySoju },
-    { id: 1, name: "Apple Soju", imageName: AppleSoju },
+    { id: 1, name: "Strawberry Soju", imageName: StrawberrySoju },
+    { id: 2, name: "Apple Soju", imageName: AppleSoju },
   ];
 
 
@@ -36,6 +36,7 @@ const Shelf = () => {
                     className=""
                     alt={DrinksCollection[ShelfItem].name}
                   />
+                  <h2>{DrinksCollection[1].name}</h2>
                 </div>
               ))}
             </div>

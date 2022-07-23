@@ -14,7 +14,7 @@ const Shelf = () => {
   //   ];
 
   const ShelfItemsCollection = [
-    0,1,1,0,1,1,1,0,0,1,0,1,0,0,1,1
+    0,1,1,0,1,1,1
   ];
 
   const DrinksCollection = [
