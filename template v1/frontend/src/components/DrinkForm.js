@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { useWorkoutsContext } from '../hooks/useWorkoutsContext'
+import { useDrinksContext } from '../hooks/useDrinksContext'
 
-const WorkoutForm = () => {
-  const { dispatch } = useWorkoutsContext()
+const DrinkForm = () => {
+  const { dispatch } = useDrinksContext()
 
   const [title, setTitle] = useState('')
   const [load, setLoad] = useState('')
@@ -13,11 +13,11 @@ const WorkoutForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const workout = {title, load, reps}
+    const Drink = {title, load, reps}
     
-    const response = await fetch('/api/workouts', {
+    const response = await fetch('/api/Drinks', {
       method: 'POST',
-      body: JSON.stringify(workout),
+      body: JSON.stringify(Drink),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -34,14 +34,14 @@ const WorkoutForm = () => {
       setTitle('')
       setLoad('')
       setReps('')
-      dispatch({type: 'CREATE_WORKOUT', payload: json})
+      dispatch({type: 'CREATE_DRINK', payload: json})
     }
 
   }
 
   return (
     <form className="create" onSubmit={handleSubmit}> 
-      <h3>Add a New Workout</h3>
+      <h3>Add a New Drink</h3>
 
       <label>Excersize Title:</label>
       <input 
@@ -67,10 +67,10 @@ const WorkoutForm = () => {
         className={emptyFields.includes('reps') ? 'error' : ''}
       />
 
-      <button>Add Workout</button>
+      <button>Add Drink</button>
       {error && <div className="error">{error}</div>}
     </form>
   )
 }
 
-export default WorkoutForm
+export default DrinkForm

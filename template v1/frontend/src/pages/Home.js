@@ -1,34 +1,34 @@
 import { useEffect } from "react"
-import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
+import { useDrinksContext } from "../hooks/useDrinksContext"
 
 // components
-import WorkoutDetails from "../components/WorkoutDetails"
-import WorkoutForm from "../components/WorkoutForm"
+import DrinkDetails from "../components/DrinkDetails"
+import DrinkForm from "../components/DrinkForm"
 
 const Home = () => {
-  const { workouts, dispatch } = useWorkoutsContext()
+  const { drinks, dispatch } = useDrinksContext()
 
   useEffect(() => {
-    const fetchWorkouts = async () => {
-      const response = await fetch('/api/workouts')
+    const fetchDrinks = async () => {
+      const response = await fetch('/api/drinks')
       const json = await response.json()
 
       if (response.ok) {
-        dispatch({type: 'SET_WORKOUTS', payload: json})
+        dispatch({type: 'SET_DRINKS', payload: json})
       }
     }
 
-    fetchWorkouts()
+    fetchDrinks()
   }, [dispatch])
 
   return (
     <div className="home">
-      <div className="workouts">
-        {workouts && workouts.map(workout => (
-          <WorkoutDetails workout={workout} key={workout._id} />
+      <div className="drinks">
+        {drinks && drinks.map(drink => (
+          <DrinkDetails drink={drink} key={drink._id} />
         ))}
       </div>
-      <WorkoutForm />
+      <DrinkForm />
     </div>
   )
 }
