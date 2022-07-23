@@ -37,6 +37,12 @@ const Shelf = () => {
     { id: 2, name: "Apple Soju", imageName: "apple-soju" },
   ];
 
+    const DrinksDict = 
+    [{dict: {'awesome': ['wow','alo'], 'great': ['ano', 'alo' ]},];
+  
+
+
+
 
   return (
     <div>
@@ -51,7 +57,6 @@ const Shelf = () => {
                     className=""
                     alt={ShelfItem.name}
                   />
-                  <h2>{DrinksCollection[1].name}</h2>
                 </div>
               ))}
             </div>

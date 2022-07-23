@@ -51,7 +51,7 @@ const Shelf = () => {
                     className=""
                     alt={ShelfItem.name}
                   />
-                  <h2>{DrinksCollection[1].name}</h2>
+                  <h2>DrinksCollection</h2>
                 </div>
               ))}
             </div>
