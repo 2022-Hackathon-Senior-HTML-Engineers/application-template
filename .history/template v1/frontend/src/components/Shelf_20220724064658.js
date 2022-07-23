@@ -243,7 +243,7 @@ const Shelf = () => {
             </Grid>
           </Grid>
           <img
-            src={SetTasksButton}
+            src={SetNewTaskButton}
             className="nav-button"
             alt="Add new task button"
             onClick={() =>
