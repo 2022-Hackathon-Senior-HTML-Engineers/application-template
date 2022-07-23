@@ -18,37 +18,38 @@ const YoutubeVideo = () => {
         <Grid item xs={8}>
           <div className="youtube-content">
             <div className="video-section">
-              <ReactPlayer url="https://www.youtube.com/watch?v=0Fcdln0HjBA&ab_channel=DavidWelch" />
+
+                <ReactPlayer url="https://www.youtube.com/watch?v=0Fcdln0HjBA&ab_channel=DavidWelch" />
+
             </div>
           </div>
         </Grid>
         <Grid item xs={4}>
           <div className="video-title-section">
-            <h3>
-              You're currently watching: AofA Lecture 28: Running time for
-              Dijkstra and when Dijkstra fails
-            </h3>
+            <h3>You're currently watching: AofA Lecture 28: Running time for Dijkstra and when Dijkstra fails</h3>
             <br />
-            <h4>
-              Don't forget to keep track of your progress through the tasks!
-            </h4>
+            <h4>Don't forget to keep track of your progress through the tasks!</h4>
           </div>
         </Grid>
       </Grid>
       <div className="video-bottom-half">
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <div className="notepad-section"></div>
-          </Grid>
-          <Grid item xs={4}>
-            <div className="drawing-pad-section">
-              <DrawingPad />
-            </div>
-          </Grid>
-          <Grid item xs={4}>
-            <div className="stopwatch-section"></div>
-          </Grid>
+      <Grid container spacing={2}>
+        <Grid item xs={4}>
+          <div className="notepad-section">
+
+          </div>
         </Grid>
+        <Grid item xs={4}>
+          <div className="drawing-pad-section">
+<DrawingPad/>
+          </div>
+        </Grid>
+        <Grid item xs={4}>
+          <div className="stopwatch-section">
+
+          </div>
+        </Grid>
+      </Grid>
       </div>
     </div>
   );
