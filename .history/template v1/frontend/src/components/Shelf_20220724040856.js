@@ -278,6 +278,7 @@ const Shelf = () => {
       </CustomPopup>
 
       <TasksPopup onClose={popupCloseTasksHandler} show={visibilityTasks}>
+        <div></div>
         <div className="drinks-list">
           <div className="pick-task-container">
             <h2>Pick your task:</h2>

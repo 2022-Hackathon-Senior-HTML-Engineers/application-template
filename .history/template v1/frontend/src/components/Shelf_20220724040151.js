@@ -8,7 +8,7 @@ import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
 import { taskState } from "../atoms/currentTaskState";
 
-import TasksPopup from "../components/DetailsPopup";
+import DetailsPopup from "../components/DetailsPopup";
 import CustomPopup from "../components/CustomPopup";
 import Juice from "../images/popUpDrinks/juice.png";
 import MountGay from "../images/popUpDrinks/mountGay.png";
@@ -179,7 +179,7 @@ const Shelf = () => {
                           .imageName
                       }
                       className=""
-                      alt="item"
+                      alt="SDJKF"
                     />
                   </div>
                 </Grid>
@@ -277,14 +277,15 @@ const Shelf = () => {
         <img src={Tui} className="grid-item" />
       </CustomPopup>
 
-      <TasksPopup onClose={popupCloseTasksHandler} show={visibilityTasks}>
+      <DetailsPopup onClose={popupCloseTasksHandler} show={visibilityTasks}>
+        <div></div>
         <div className="drinks-list">
           <div className="pick-task-container">
             <h2>Pick your task:</h2>
             <div className="pick-task-content">
               {" "}
-              {TasksCollection.map((Task, i) => (
-                <div onClick={() => setCurrentSelection([i].concat(currentSelection[1]))}>
+              {TasksCollection.map((Task) => (
+                <div>
                   <p>{Task.title}</p>
                 </div>
               ))}
@@ -294,7 +295,7 @@ const Shelf = () => {
             <h2>Pick your drink:</h2>
             <div className="pick-drink-content">
               <div className="grid-container-drinks-list">
-                {DrinksCollection.slice(0, 15).map((Drink, i) => (
+                {DrinksCollection.slice(0, 15).map((Drink) => (
                   <div
                     className="grid-item"
                     onClick={() =>
@@ -316,7 +317,7 @@ const Shelf = () => {
             </div>
           </div>
         </div>
-      </TasksPopup>
+      </DetailsPopup>
     </div>
   );
 };
