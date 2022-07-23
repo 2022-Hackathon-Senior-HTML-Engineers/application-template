@@ -16,6 +16,7 @@ import TasksCollection from "../data/TasksCollection";
 
 import TasksPopup from "../components/DetailsPopup";
 import CustomPopup from "../components/CustomPopup";
+import ProfilePopup from "../components/ProfilePopup";
 
 import BackButton from "../images/back-button.png";
 import DetailsButton from "../images/details-button.png";
@@ -57,6 +58,7 @@ const Shelf = () => {
 
   const [visibilityDetails, setVisibilityDetails] = useState(false);
   const [visibilityTasks, setVisibilityTasks] = useState(false);
+  const [visibilityProfile, setVisibilityProfile] = useState(false);
 
   const popupCloseDetailsHandler = (e) => {
     setVisibilityDetails(e);
@@ -65,6 +67,10 @@ const Shelf = () => {
   const popupCloseTasksHandler = (e) => {
     setVisibilityTasks(e);
   };
+
+  const popupCloseProfileHandler = (e) => {
+    setVisibilityProfile(e);
+  }
 
   return (
     <div>
@@ -117,7 +123,7 @@ const Shelf = () => {
                     <img
                       src={FinishButton}
                       className="finish-button"
-                      onClick={() => 
+                      onClick={() =>
                         setOnDisplay(
                           [].concat(
                             onDisplay.slice(0, itemPosition),
@@ -125,10 +131,10 @@ const Shelf = () => {
                               itemPosition + 1,
                               16
                             ),
-                            [[17,15]]
+                            [[17, 15]]
                           )
                         )
-                        
+
                       }
                     />
                     <div className="task-box">
@@ -157,9 +163,9 @@ const Shelf = () => {
                     <div className="nav-left-2">
                       <img src={User} className="" />
                       <br />
-                      <img src={ProfileButton} className="nav-button" />
+                      <img src={ProfileButton} className="nav-button" onClick={(e) => setVisibilityProfile(!visibilityProfile)} />
                       <br />
-                      <img src={LogOutButton} className="nav-button" onClick=""/>
+                      <img src={LogOutButton} className="nav-button" onClick="" />
                     </div>
                   </Grid>
                   <Grid item xs={6} md={8}>
@@ -175,7 +181,7 @@ const Shelf = () => {
                         className="nav-button"
                         onClick={(e) => setCurrentNavState(!currentNavState)}
                       /></Link>
-                      
+
                     </div>
                   </Grid>
                 </Grid>
@@ -184,13 +190,19 @@ const Shelf = () => {
           )}
         </div>
       </div>
-
       <CustomPopup
         onClose={popupCloseDetailsHandler}
         show={visibilityDetails}
         title="Details"
       >
       </CustomPopup>
+
+      <ProfilePopup
+        onClose={popupCloseProfileHandler}
+        show={visibilityProfile}
+        title="Profile"
+      >
+      </ProfilePopup>
 
       <TasksPopup onClose={popupCloseTasksHandler} show={visibilityTasks}>
         <div>
@@ -203,7 +215,7 @@ const Shelf = () => {
               <div className="pick-task-container">
                 <div className="pick-task-content">
                   {" "}
-                  {TasksCollection.slice(0,17).map((Task, i) => (
+                  {TasksCollection.slice(0, 17).map((Task, i) => (
                     <div
                       className="pick-task-item"
                       onClick={() =>
