@@ -8,7 +8,6 @@ import { itemState } from "../atoms/currentItemState";
 import { taskState } from "../atoms/currentTaskState";
 
 import DetailsPopup from "../components/DetailsPopup";
-import CustomPopup from "../components/CustomPopup";
 import { useState } from "react";
 import Soju from "../images/popUpDrinks/soju.png";
 import Juice from "../images/popUpDrinks/juice.png";
@@ -20,9 +19,6 @@ import FinishButton from "../images/finish-button.png";
 import LecturesButton from "../images/lectures-button.png";
 import ResumeLastVideoButton from "../images/resume-last-video-button.png";
 import SetTasksButton from "../images/set-tasks-button.png";
-import User from "../images/user.png";
-import ProfileButton from "../images/profile-button.png";
-import LogOutButton from "../images/log-out-button.png";
 
 import StrawberrySoju from "../images/drinks/strawberry-soju.png";
 import AppleSoju from "../images/drinks/apple-soju.png";
@@ -80,15 +76,9 @@ const Shelf = () => {
     { id: 16, title: "Lecturer forgot to turn up to lecture." },
   ];
 
-  const [visibilityDetails, setVisibilityDetails] = useState(false);
-  const [visibilityTasks, setVisibilityTasks] = useState(false);
-
-  const popupCloseDetailsHandler = (e) => {
-    setVisibilityDetails(e);
-  };
-
-  const popupCloseTasksHandler = (e) => {
-    setVisibilityTasks(e);
+  const [visibility, setVisibility] = useState(false);
+  const popupCloseHandler = (e) => {
+    setVisibility(e);
   };
 
   //   const removeTask = (e) => {
@@ -135,7 +125,7 @@ const Shelf = () => {
               </Grid>
               <Grid item xs={6} md={8}>
                 <div className="nav-right">
-                  <img src={BackButton} className="back-button" onClick={(e) => setCurrentNavState(!currentNavState)}/>
+                  <img src={BackButton} className="back-button" />
                   <img src={FinishButton} className="finish-button" />
                   <div className="task-box">
                     <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
@@ -146,7 +136,7 @@ const Shelf = () => {
                   <img
                     src={DetailsButton}
                     className="details-button"
-                    onClick={(e) => setVisibilityDetails(!visibilityDetails)}
+                    onClick={(e) => setVisibility(!visibility)}
                   />
                 </div>
               </Grid>
@@ -156,36 +146,29 @@ const Shelf = () => {
 <div>
 <Grid container spacing={0}>
               <Grid item xs={6} md={4}>
-                <div className="nav-left-2">
-                <img
-                    src={User}
+                <div className="nav-left">
+                  <img
+                    src={DrinksCollection[currentItemState].imageName}
                     className=""
-                  /><br/>
-                  <img
-                    src={ProfileButton}
-                    className="nav-button"
-                  /><br/>
-                  <img
-                    src={LogOutButton}
-                    className="nav-button"
+                    alt="SDJKF"
                   />
                 </div>
               </Grid>
               <Grid item xs={6} md={8}>
-                <div className="nav-right-2">
+                <div className="nav-right" style={{"marginTop":"10px"}}>
                 <img
                     src={LecturesButton}
-                    className="nav-button"
+                    className="lectures-button"
                   />
                   <img
                     src={SetTasksButton}
-                    className="nav-button"
-                    onClick={(e) => setVisibilityTasks(!visibilityTasks)}
+                    className="set-tasks-button"
+
                   />
                   <img
                     src={ResumeLastVideoButton}
-                    className="nav-button"
-onClick={(e) => setCurrentNavState(!currentNavState)}
+                    className="resume-last-video-button"
+
                   />
                 </div>
               </Grid>
@@ -197,27 +180,10 @@ onClick={(e) => setCurrentNavState(!currentNavState)}
         </div>
       </div>
 
-      <CustomPopup
-        onClose={popupCloseDetailsHandler}
-        show={visibilityDetails}
-        title="Details"
-      >
-        <img src={Soju} className="grid-item" />
-        <img src={Juice} className="grid-item" />
-        <img src={RedBull} className="grid-item" />
-        <img src={MountGay} className="grid-item" />
-        <img src={Corona} className="grid-item" />
-        <img src={FireBall} className="grid-item" />
-        <img src={GingerBeer} className="grid-item" />
-        <img src={UpNGo} className="grid-item" />
-        <img src={Vodka} className="grid-item" />
-        <img src={Tui} className="grid-item" />
-      </CustomPopup>
-
       <DetailsPopup
-        onClose={popupCloseTasksHandler}
-        show={visibilityTasks}
-        title="Set Tasks"
+        onClose={popupCloseHandler}
+        show={visibility}
+        title="Drinks"
       >
         <img src={Soju} className="grid-item" />
         <img src={Juice} className="grid-item" />

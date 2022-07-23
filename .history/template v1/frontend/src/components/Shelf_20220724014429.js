@@ -20,9 +20,6 @@ import FinishButton from "../images/finish-button.png";
 import LecturesButton from "../images/lectures-button.png";
 import ResumeLastVideoButton from "../images/resume-last-video-button.png";
 import SetTasksButton from "../images/set-tasks-button.png";
-import User from "../images/user.png";
-import ProfileButton from "../images/profile-button.png";
-import LogOutButton from "../images/log-out-button.png";
 
 import StrawberrySoju from "../images/drinks/strawberry-soju.png";
 import AppleSoju from "../images/drinks/apple-soju.png";
@@ -135,7 +132,7 @@ const Shelf = () => {
               </Grid>
               <Grid item xs={6} md={8}>
                 <div className="nav-right">
-                  <img src={BackButton} className="back-button" onClick={(e) => setCurrentNavState(!currentNavState)}/>
+                  <img src={BackButton} className="back-button" />
                   <img src={FinishButton} className="finish-button" />
                   <div className="task-box">
                     <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
@@ -156,23 +153,16 @@ const Shelf = () => {
 <div>
 <Grid container spacing={0}>
               <Grid item xs={6} md={4}>
-                <div className="nav-left-2">
-                <img
-                    src={User}
+                <div className="nav-left">
+                  <img
+                    src={DrinksCollection[currentItemState].imageName}
                     className=""
-                  /><br/>
-                  <img
-                    src={ProfileButton}
-                    className="nav-button"
-                  /><br/>
-                  <img
-                    src={LogOutButton}
-                    className="nav-button"
+                    alt="SDJKF"
                   />
                 </div>
               </Grid>
               <Grid item xs={6} md={8}>
-                <div className="nav-right-2">
+                <div className="nav-right" style={{"marginTop":"6.5px"}}>
                 <img
                     src={LecturesButton}
                     className="nav-button"
@@ -185,7 +175,7 @@ const Shelf = () => {
                   <img
                     src={ResumeLastVideoButton}
                     className="nav-button"
-onClick={(e) => setCurrentNavState(!currentNavState)}
+
                   />
                 </div>
               </Grid>

@@ -197,22 +197,9 @@ left: 113px;
 bottom: 45px;
 }
 
-.nav-left-2 {
-  position: absolute;
-left: 113px;
-bottom: 45px;
-margin-left: 8.5px;
-}
-
 .nav-right {
   text-align: left;
   padding: 5px 0 0 14px;
-}
-
-.nav-right-2 {
-  text-align: left;
-  padding: 5px 0 0 14px;
-  margin-top: 6.5px;
 }
 
 .nav-container {

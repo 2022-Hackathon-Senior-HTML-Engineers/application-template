@@ -135,7 +135,7 @@ const Shelf = () => {
               </Grid>
               <Grid item xs={6} md={8}>
                 <div className="nav-right">
-                  <img src={BackButton} className="back-button" onClick={(e) => setCurrentNavState(!currentNavState)}/>
+                  <img src={BackButton} className="back-button" />
                   <img src={FinishButton} className="finish-button" />
                   <div className="task-box">
                     <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
@@ -185,7 +185,7 @@ const Shelf = () => {
                   <img
                     src={ResumeLastVideoButton}
                     className="nav-button"
-onClick={(e) => setCurrentNavState(!currentNavState)}
+
                   />
                 </div>
               </Grid>
