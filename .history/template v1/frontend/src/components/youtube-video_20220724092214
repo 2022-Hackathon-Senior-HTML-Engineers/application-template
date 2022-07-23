@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 
+const Youtube
+
 // Render a YouTube video player
 <ReactPlayer url='https://auckland.au.panopto.com/Panopto/Pages/Embed.aspx?id=b02784f7-f51f-426b-95eb-aed700330751' />

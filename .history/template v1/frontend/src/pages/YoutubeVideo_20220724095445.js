@@ -16,9 +16,9 @@ const YoutubeVideo = () => {
         <Grid item xs={8}>
           <div className="youtube-content">
             <div className="video-section">
-
+              <div className="player-wrapper">
                 <ReactPlayer url="https://www.youtube.com/watch?v=0Fcdln0HjBA&ab_channel=DavidWelch" />
-
+              </div>
             </div>
           </div>
         </Grid>
@@ -29,12 +29,9 @@ const YoutubeVideo = () => {
             <h2>
               AofA Lecture 28: Running time for Dijkstra and when Dijkstra fails
             </h2>
-            <h4>Don't forget to keep track of your progress through the tasks!</h4>
           </div>
         </Grid>
       </Grid>
-      <div className="video-bottom-half">
-      </div>
     </div>
   );
 };

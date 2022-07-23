@@ -319,7 +319,7 @@ width: 100%;
 }
 
 .video-section {
-  margin: 3%;
+  margin: 0 auto;
 }
 
 .player-wrapper {
@@ -329,11 +329,7 @@ width: 100%;
 }
 
 .video-title-section {
-  margin: 16% 9% 9% 9%;
-}
-
-.video-bottom-half {
-  
+  padding: 5%;
 }
 
 /* SPLIT */

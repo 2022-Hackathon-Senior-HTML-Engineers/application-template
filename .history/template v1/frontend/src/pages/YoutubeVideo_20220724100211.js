@@ -29,11 +29,11 @@ const YoutubeVideo = () => {
             <h2>
               AofA Lecture 28: Running time for Dijkstra and when Dijkstra fails
             </h2>
-            <h4>Don't forget to keep track of your progress through the tasks!</h4>
           </div>
         </Grid>
       </Grid>
       <div className="video-bottom-half">
+<h3>HHSDOUFHDSUFH</h3>
       </div>
     </div>
   );
