@@ -109,36 +109,35 @@ const Shelf = () => {
           </div>
         </div>
         <div className="machine-bottom">
-          {currentNavState ? (
-            <><Grid container spacing={0}>
-              <Grid item xs={6} md={4}>
-                <div className="nav-left">
-                  <img
-                    src={DrinksCollection[currentItemState].imageName}
-                    className=""
-                    alt="SDJKF"
-                  />
+        
+          <Grid container spacing={0}>
+            <Grid item xs={6} md={4}>
+              <div className="nav-left">
+                <img
+                  src={DrinksCollection[currentItemState].imageName}
+                  className=""
+                  alt="SDJKF"
+                />
+              </div>
+            </Grid>
+            <Grid item xs={6} md={8}>
+              <div className="nav-right">
+                <img src={BackButton} className="back-button" />
+                <img src={FinishButton} className="finish-button" />
+                <div className="task-box">
+                  <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
+                    {TasksCollection[currentTaskState].title}
+                  </h5>
                 </div>
-              </Grid>
-              <Grid item xs={6} md={8}>
-                <div className="nav-right">
-                  <img src={BackButton} className="back-button" />
-                  <img src={FinishButton} className="finish-button" />
-                  <div className="task-box">
-                    <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                      {TasksCollection[currentTaskState].title}
-                    </h5>
-                  </div>
 
-                  <img
-                    src={DetailsButton}
-                    className="details-button"
-                    onClick={(e) => setVisibility(!visibility)}
-                  />
-                </div>
-              </Grid>
-            </Grid></>
-          ) : <></>}
+                <img
+                  src={DetailsButton}
+                  className="details-button"
+                  onClick={(e) => setVisibility(!visibility)}
+                />
+              </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 

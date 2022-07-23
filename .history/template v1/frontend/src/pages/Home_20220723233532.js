@@ -20,7 +20,7 @@ import DrinkDetails from "../components/DrinkDetails"
 import DrinkForm from "../components/DrinkForm"
 
 const Home = () => {
-  // const { drinks, dispatch } = useDrinksContext()
+  const { drinks, dispatch } = useDrinksContext()
   const [visibility, setVisibility] = useState(false);
   const popupCloseHandler = (e) => {
     setVisibility(e);

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
-import { Tooltip } from "@mui/material";
+import Tooltip from "@mui/material";
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
@@ -92,53 +92,50 @@ const Shelf = () => {
                 <div
                   className="grid-item"
                   onClick={() => (
-                    setCurrentItemState(ShelfItem),
-                    setCurrentTaskState(ShelfItem)
+                      setCurrentItemState(ShelfItem),
+                      setCurrentTaskState(ShelfItem)
                   )}
                 >
-                  <Tooltip title={<h2>{DrinksCollection[ShelfItem].name}</h2>}>
-                    <img
-                      src={DrinksCollection[ShelfItem].imageName}
-                      className=""
-                      alt={DrinksCollection[ShelfItem].name}
-                    />
-                  </Tooltip>
+                  {/* onClick={viewDetails(ShelfItem)} */}
+                  <img
+                    src={DrinksCollection[ShelfItem].imageName}
+                    className=""
+                    alt={DrinksCollection[ShelfItem].name}
+                  />
                 </div>
               ))}
             </div>
           </div>
         </div>
         <div className="machine-bottom">
-          {currentNavState ? (
-            <><Grid container spacing={0}>
-              <Grid item xs={6} md={4}>
-                <div className="nav-left">
-                  <img
-                    src={DrinksCollection[currentItemState].imageName}
-                    className=""
-                    alt="SDJKF"
-                  />
+          <Grid container spacing={0}>
+            <Grid item xs={6} md={4}>
+              <div className="nav-left">
+                <img
+                  src={DrinksCollection[currentItemState].imageName}
+                  className=""
+                  alt="SDJKF"
+                />
+              </div>
+            </Grid>
+            <Grid item xs={6} md={8}>
+              <div className="nav-right">
+                <img src={BackButton} className="back-button" />
+                <img src={FinishButton} className="finish-button" />
+                <div className="task-box">
+                  <h5 style={{ marginTop: "4px", marginBottom: "4px"}}>
+                  {TasksCollection[currentTaskState].title}
+                  </h5>
                 </div>
-              </Grid>
-              <Grid item xs={6} md={8}>
-                <div className="nav-right">
-                  <img src={BackButton} className="back-button" />
-                  <img src={FinishButton} className="finish-button" />
-                  <div className="task-box">
-                    <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                      {TasksCollection[currentTaskState].title}
-                    </h5>
-                  </div>
 
-                  <img
-                    src={DetailsButton}
-                    className="details-button"
-                    onClick={(e) => setVisibility(!visibility)}
-                  />
-                </div>
-              </Grid>
-            </Grid></>
-          ) : <></>}
+                <img
+                  src={DetailsButton}
+                  className="details-button"
+                  onClick={(e) => setVisibility(!visibility)}
+                />
+              </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 

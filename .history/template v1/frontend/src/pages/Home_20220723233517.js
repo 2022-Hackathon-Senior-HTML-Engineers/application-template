@@ -20,7 +20,7 @@ import DrinkDetails from "../components/DrinkDetails"
 import DrinkForm from "../components/DrinkForm"
 
 const Home = () => {
-  // const { drinks, dispatch } = useDrinksContext()
+  const { drinks, dispatch } = useDrinksContext()
   const [visibility, setVisibility] = useState(false);
   const popupCloseHandler = (e) => {
     setVisibility(e);
@@ -45,11 +45,11 @@ const Home = () => {
       <div className="drinks">
         {/* <YoutubeEmbed embedId="rokGy0huYEA" /> */}
 
-        {/* {drinks && drinks.map(drink => (
+        {drinks && drinks.map(drink => (
           <DrinkDetails drink={drink} key={drink._id} />
-        ))} */}
+        ))}
       </div>
-      {/* <DrinkForm /> */}
+      <DrinkForm />
 
 
       <CustomPopup
