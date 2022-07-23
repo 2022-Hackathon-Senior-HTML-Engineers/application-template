@@ -23,7 +23,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchDrinks = async () => {
-      const response = await fetch('/api/drinks')
+      const response = await fetch('https://localhost:20522/api/drinks')
       const json = await response.json()
 
       if (response.ok) {
