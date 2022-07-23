@@ -1,10 +1,10 @@
-import { useDrinksContext } from '../hooks/usedrinksContext'
+import { useDrinksContext } from '../hooks/useDrinksContext'
 
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
-const drinkDetails = ({ drink }) => {
-  const { dispatch } = usedrinksContext()
+const DrinkDetails = ({ drink }) => {
+  const { dispatch } = useDrinksContext()
 
   const handleClick = async () => {
     const response = await fetch('/api/drinks/' + drink._id, {
@@ -28,4 +28,4 @@ const drinkDetails = ({ drink }) => {
   )
 }
 
-export default drinkDetails
+export default DrinkDetails

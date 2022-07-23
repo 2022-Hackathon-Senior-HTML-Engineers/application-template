@@ -5,15 +5,15 @@ const DrinkForm = () => {
   const { dispatch } = useDrinksContext()
 
   const [title, setTitle] = useState('')
-  const [load, setLoad] = useState('')
-  const [reps, setReps] = useState('')
+  const [alcoholic, setAlcoholic] = useState('')
+  const [frequency, setFrequency] = useState('')
   const [error, setError] = useState(null)
   const [emptyFields, setEmptyFields] = useState([])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const Drink = {title, load, reps}
+    const Drink = {title, alcoholic, frequency}
     
     const response = await fetch('/api/Drinks', {
       method: 'POST',
@@ -32,9 +32,9 @@ const DrinkForm = () => {
       setEmptyFields([])
       setError(null)
       setTitle('')
-      setLoad('')
-      setReps('')
-      dispatch({type: 'CREATE_DRINK', payload: json})
+      setAlcoholic('')
+      setFrequency('')
+      dispatch({type: 'CREATE_DRINK', payalcoholic: json})
     }
 
   }
@@ -43,7 +43,7 @@ const DrinkForm = () => {
     <form className="create" onSubmit={handleSubmit}> 
       <h3>Add a New Drink</h3>
 
-      <label>Excersize Title:</label>
+      <label>Title:</label>
       <input 
         type="text" 
         onChange={(e) => setTitle(e.target.value)} 
@@ -51,20 +51,20 @@ const DrinkForm = () => {
         className={emptyFields.includes('title') ? 'error' : ''}
       />
 
-      <label>Load (in kg):</label>
+      <label>Alcoholic:</label>
       <input 
-        type="number" 
-        onChange={(e) => setLoad(e.target.value)} 
-        value={load}
-        className={emptyFields.includes('load') ? 'error' : ''}
+        type="boolean" 
+        onChange={(e) => setAlcoholic(e.target.value)} 
+        value={alcoholic}
+        className={emptyFields.includes('alcoholic') ? 'error' : ''}
       />
 
-      <label>Number of Reps:</label>
+      <label>Frequency (gulps, shots, glasses etc):</label>
       <input 
-        type="number" 
-        onChange={(e) => setReps(e.target.value)} 
-        value={reps}
-        className={emptyFields.includes('reps') ? 'error' : ''}
+        type="string" 
+        onChange={(e) => setFrequency(e.target.value)} 
+        value={frequency}
+        className={emptyFields.includes('frequency') ? 'error' : ''}
       />
 
       <button>Add Drink</button>

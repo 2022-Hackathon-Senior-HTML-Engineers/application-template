@@ -8,7 +8,7 @@ const rewardSchema = new Schema({
     required: true
   },
   alcoholic: {
-    type: Boolean,
+    type: String,
     required: true
   },
   frequency: {

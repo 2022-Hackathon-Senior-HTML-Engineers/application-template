@@ -1,11 +1,11 @@
-import { WorkoutsContext } from "../context/DrinksContext"
+import { DrinksContext } from "../context/DrinksContext"
 import { useContext } from "react"
 
-export const useWorkoutsContext = () => {
-  const context = useContext(WorkoutsContext)
+export const useDrinksContext = () => {
+  const context = useContext(DrinksContext)
 
   if(!context) {
-    throw Error('useWorkoutsContext must be used inside a WorkoutsContextProvider')
+    throw Error('useDrinksContext must be used inside a DrinksContextProvider')
   }
 
   return context

@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
 
 // components
-import DrinkDetails from "../components/DrinkDetails"
+import DrinkDetails from "../components/DrinksDetails"
 import DrinkForm from "../components/DrinkForm"
 
 const Home = () => {
