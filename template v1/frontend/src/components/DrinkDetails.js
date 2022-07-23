@@ -7,7 +7,7 @@ const DrinkDetails = ({ drink }) => {
   const { dispatch } = useDrinksContext()
 
   const handleClick = async () => {
-    const response = await fetch('/api/drinks/' + drink._id, {
+    const response = await fetch('https://localhost:20522/api/drinks/' + drink._id, {
       method: 'DELETE'
     })
     const json = await response.json()
