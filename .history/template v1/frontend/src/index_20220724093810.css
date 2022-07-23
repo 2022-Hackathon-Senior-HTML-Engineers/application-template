@@ -314,26 +314,14 @@ width: 100%;
 
 .youtube-content {
   background-color: blue;
-height: 50vh;
-width: 100%;
+
 }
 
 .video-section {
-  margin: 3%;
-}
+  margin: 0 auto;
 
-.player-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
 
-.video-title-section {
-  margin: 16% 9% 9% 9%;
-}
 
-.video-bottom-half {
-  
 }
 
 /* SPLIT */

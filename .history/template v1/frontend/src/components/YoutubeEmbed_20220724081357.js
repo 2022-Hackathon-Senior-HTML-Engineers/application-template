@@ -1,5 +1,4 @@
-import { Player } from 'video-react';
-
+import PropTypes from "prop-types";
 
 const YoutubeEmbed = ({ embedId }) => (
     <div className="video-responsive">

@@ -5,7 +5,6 @@ import YoutubeEmbed from "../components/YoutubeEmbed";
 import ReactPlayer from "react-player";
 
 const YoutubeVideo = () => {
-
   // State for youtube URL -> the thing you put in the brackets in useState() is just the default url it start with (can also be empty "")
   const [currentURL, setCurrentURL] = useState("insert-default-url-here");
   // To view the current URL, access it with currentURL
@@ -46,18 +45,21 @@ const YoutubeVideo = () => {
           </div>
         </Grid>
         <Grid item xs={4}>
-          <div className="notepad-section">
-
+          <div className="video-title-section">
+            <h3>You're currently watching:</h3>
+            <br />
+            <h2>
+              AofA Lecture 28: Running time for Dijkstra and when Dijkstra fails
+            </h2>
           </div>
         </Grid>
         <Grid item xs={4}>
-          <div className="drawing-pad-section">
-
-          </div>
-        </Grid>
-        <Grid item xs={4}>
-          <div className="stopwatch-section">
-
+          <div className="video-title-section">
+            <h3>You're currently watching:</h3>
+            <br />
+            <h2>
+              AofA Lecture 28: Running time for Dijkstra and when Dijkstra fails
+            </h2>
           </div>
         </Grid>
       </Grid>
