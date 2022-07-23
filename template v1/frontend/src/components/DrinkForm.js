@@ -43,7 +43,7 @@ const DrinkForm = () => {
     <form className="create" onSubmit={handleSubmit}> 
       <h3>Add a New Drink</h3>
 
-      <label>Excersize Title:</label>
+      <label>Drink Name:</label>
       <input 
         type="text" 
         onChange={(e) => setTitle(e.target.value)} 
@@ -51,7 +51,7 @@ const DrinkForm = () => {
         className={emptyFields.includes('title') ? 'error' : ''}
       />
 
-      <label>Load (in kg):</label>
+      <label>Number of Standard Drinks:</label>
       <input 
         type="number" 
         onChange={(e) => setLoad(e.target.value)} 
@@ -59,7 +59,7 @@ const DrinkForm = () => {
         className={emptyFields.includes('load') ? 'error' : ''}
       />
 
-      <label>Number of Reps:</label>
+      <label>Duration Mins:</label>
       <input 
         type="number" 
         onChange={(e) => setReps(e.target.value)} 
