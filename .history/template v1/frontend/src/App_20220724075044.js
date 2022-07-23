@@ -26,7 +26,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/youtube-player" element={<YoutubeVideo />} />
-                  <Route path="/panopto" element={<PanoptoVideo />} />
+                  <Route path="/panopto" element={<Panopto />} />
                 </Routes>
               </div>
             </Grid>

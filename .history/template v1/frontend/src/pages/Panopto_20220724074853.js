@@ -3,8 +3,10 @@ import { useState } from "react"
 import { Grid } from "@mui/material";
 import YoutubeEmbed from "../components/YoutubeEmbed";
 
+import Timer from "../components/Timer";
 
-const YoutubeVideo = () => {
+
+const PanoptoVideo = () => {
 
     // State for youtube URL -> the thing you put in the brackets in useState() is just the default url it start with (can also be empty "")
     const [currentURL, setCurrentURL] = useState("insert-default-url-here");
@@ -14,12 +16,11 @@ const YoutubeVideo = () => {
   return (
     <div className="">
       <div className="">
-
-<YoutubeEmbed/>
+<Timer/>
 
     </div>
     </div>
   )
 }
 
-export default YoutubeVideo;
+export default PanoptoVideo;

@@ -8,7 +8,6 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Shelf from "./components/Shelf";
 import YoutubeVideo from "./pages/YoutubeVideo";
-import PanoptoVideo from "./pages/Panopto";
 
 function App() {
   return (
@@ -26,7 +25,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/youtube-player" element={<YoutubeVideo />} />
-                  <Route path="/panopto" element={<PanoptoVideo />} />
+                  <Route path="/panopto" element={<Panopto />} />
                 </Routes>
               </div>
             </Grid>
