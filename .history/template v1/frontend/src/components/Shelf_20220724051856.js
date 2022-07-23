@@ -49,7 +49,7 @@ const Shelf = () => {
 
   const [currentSelection, setCurrentSelection] = useState([0, 0]);
 
-  const [onDisplay, setOnDisplay] = useState([
+  const [onDisplay, setOnDisPlay] = useState([
     [0, 0],
     [1, 1],
     [2, 2],
@@ -340,8 +340,9 @@ const Shelf = () => {
             onClick={() =>
               setOnDisplay(
                 [].concat(
-                  currentSelection,
-                  onDisplay.slice(1, 16)
+                  onDisplay.slice(0, currentItemState),
+                  onDisplay.slice(currentItemState + 1, 16),
+                  [15]
                 )
               )
             }

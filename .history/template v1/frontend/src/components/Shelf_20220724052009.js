@@ -49,7 +49,7 @@ const Shelf = () => {
 
   const [currentSelection, setCurrentSelection] = useState([0, 0]);
 
-  const [onDisplay, setOnDisplay] = useState([
+  const [onDisplay, setOnDisPlay] = useState([
     [0, 0],
     [1, 1],
     [2, 2],
