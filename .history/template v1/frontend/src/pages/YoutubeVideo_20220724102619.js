@@ -7,7 +7,6 @@ import ReactPlayer from "react-player";
 import DrawingPad from "../components/DrawingBoard";
 
 const YoutubeVideo = () => {
-
   // State for youtube URL -> the thing you put in the brackets in useState() is just the default url it start with (can also be empty "")
   const [currentURL, setCurrentURL] = useState("insert-default-url-here");
   // To view the current URL, access it with currentURL

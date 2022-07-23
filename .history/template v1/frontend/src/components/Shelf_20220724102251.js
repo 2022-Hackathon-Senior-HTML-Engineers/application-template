@@ -170,11 +170,11 @@ const Shelf = () => {
                         className="nav-button"
                         onClick={(e) => setVisibilityTasks(!visibilityTasks)}
                       />
-                      <Link to="/youtube-player"><img
+                      <Link to "/youtube-player"><img
                         src={ResumeLastVideoButton}
                         className="nav-button"
                         onClick={(e) => setCurrentNavState(!currentNavState)}
-                      /></Link>
+                      /></>
                       
                     </div>
                   </Grid>
