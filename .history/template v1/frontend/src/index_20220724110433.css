@@ -371,7 +371,7 @@ input.error {
 .notepad-section {
   height: 300px;
   width: 300px;
-  margin-left: 30px;
+  left: 600px;
   background-image: url("../src/images/post-it.png");
   background-repeat: no-repeat;
 }
