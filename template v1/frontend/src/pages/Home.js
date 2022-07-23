@@ -1,10 +1,17 @@
 import CustomPopup from "../components/CustomPopup";
 import { useState } from "react"
 import { Grid } from "@mui/material";
-import Soju from "../images/soju.png"
-import Juice from "../images/juice.png"
-import MountGay from "../images/mountGay.png"
-import RedBull from "../images/redBull.png"
+import Soju from "../images/popUpDrinks/soju.png"
+import Juice from "../images/popUpDrinks/juice.png"
+import MountGay from "../images/popUpDrinks/mountGay.png"
+import RedBull from "../images/popUpDrinks/redBull.png"
+import Corona from "../images/popUpDrinks/corona.png"
+import FireBall from "../images/popUpDrinks/fireball.png"
+import GingerBeer from "../images/popUpDrinks/gingerBeer.png"
+import UpNGo from "../images/popUpDrinks/upngo.png"
+import Vodka from "../images/popUpDrinks/vodka.png"
+import Tui from "../images/drinks/tui.png"
+import Yakult from "../images/drinks/yakult-soju.png"
 
 import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
@@ -51,6 +58,13 @@ const Home = () => {
         <img src={Juice} />
         <img src={RedBull} />
         <img src={MountGay} />
+        <img src={Corona} />
+        <img src={FireBall} />
+        <img src={GingerBeer} />
+        <img src={UpNGo} />
+        <img src={Vodka} />
+        <img src={Tui} />
+        <img src={Yakult} />
 
 
       </CustomPopup>
