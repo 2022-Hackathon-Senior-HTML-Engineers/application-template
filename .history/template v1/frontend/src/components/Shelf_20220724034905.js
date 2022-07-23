@@ -46,24 +46,7 @@ const Shelf = () => {
 
   const [currentTaskState, setCurrentTaskState] = useRecoilState(taskState);
 
-  const [onDisplay, setOnDisPlay] = useState([
-    [0, 0],
-    [1, 1],
-    [2, 2],
-    [3, 3],
-    [4, 4],
-    [5, 5],
-    [6, 6],
-    [7, 7],
-    [8, 8],
-    [9, 9],
-    [10, 10],
-    [11, 11],
-    [12, 12],
-    [13, 13],
-    [14, 14],
-    [15, 15],
-  ]);
+  const [onDisplay, setOnDisPlay] = useState([[0, 0], [1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6], [7, 7], [8, 8], [9, 9], [10, 10], [11, 11], [12, 12], [13, 13], [14, 14], [15, 15]])
 
   const [ShelfItemsCollection, setShelfItemsCollection] = useState([
     4, 2, 1, 0, 1, 3, 4, 15, 15, 15, 15, 15, 15, 15, 15, 15,
@@ -275,44 +258,30 @@ const Shelf = () => {
         <img src={Tui} className="grid-item" />
       </CustomPopup>
 
-      <DetailsPopup onClose={popupCloseTasksHandler} show={visibilityTasks}>
+      <DetailsPopup
+        onClose={popupCloseTasksHandler}
+        show={visibilityTasks}
+        title="Set Tasks"
+      >
         <div></div>
         <div className="drinks-list">
-          <div className="pick-task-container">
-            <h2>Pick your task:</h2>
-            <div className="pick-task-content">
-              {" "}
-              {TasksCollection.map((Task) => (
-                <div>
-                  <p>{Task.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="pick-drink-container">
-            <h2>Pick your drink:</h2>
-            <div className="pick-drink-content">
-              <div className="grid-container-drinks-list">
-                {DrinksCollection.slice(0, 15).map((Drink) => (
-                  <div
-                    className="grid-item"
-                    onClick={() =>
-                      setShelfItemsCollection(
-                        [Drink.id].concat(ShelfItemsCollection.slice(0, 15))
-                      )
-                    }
-                  >
-                    <Tooltip title={<h2>{Drink.name}</h2>}>
-                      <img
-                        src={Drink.imageName}
-                        className=""
-                        alt={Drink.name}
-                      />
-                    </Tooltip>
-                  </div>
-                ))}
+          <div className="grid-container-drinks-list">
+          <h2>Pick your task:</h2>
+          <h2>Pick your drink:</h2>
+            {DrinksCollection.slice(0, 15).map((Drink) => (
+              <div
+                className="grid-item"
+                onClick={() =>
+                  setShelfItemsCollection(
+                    [Drink.id].concat(ShelfItemsCollection.slice(0, 15))
+                  )
+                }
+              >
+                <Tooltip title={<h2>{Drink.name}</h2>}>
+                  <img src={Drink.imageName} className="" alt={Drink.name} />
+                </Tooltip>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </DetailsPopup>

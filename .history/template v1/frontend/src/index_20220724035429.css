@@ -265,15 +265,8 @@ input.error {
 }
 
 /* PICKING TASKS */
-.pick-task-content {
-  height: 30vh;
-  overflow: scroll;
-}
-
-/* PICKING DRINKS */
-.pick-drink-content {
-  height: 40vh;
-  overflow: scroll;
+.pick-task-container {
+  height: 60vh;
 }
 
 /* CONTENT */

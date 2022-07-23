@@ -289,30 +289,22 @@ const Shelf = () => {
               ))}
             </div>
           </div>
-          <div className="pick-drink-container">
+          <div className="grid-container-drinks-list">
             <h2>Pick your drink:</h2>
-            <div className="pick-drink-content">
-              <div className="grid-container-drinks-list">
-                {DrinksCollection.slice(0, 15).map((Drink) => (
-                  <div
-                    className="grid-item"
-                    onClick={() =>
-                      setShelfItemsCollection(
-                        [Drink.id].concat(ShelfItemsCollection.slice(0, 15))
-                      )
-                    }
-                  >
-                    <Tooltip title={<h2>{Drink.name}</h2>}>
-                      <img
-                        src={Drink.imageName}
-                        className=""
-                        alt={Drink.name}
-                      />
-                    </Tooltip>
-                  </div>
-                ))}
+            {DrinksCollection.slice(0, 15).map((Drink) => (
+              <div
+                className="grid-item"
+                onClick={() =>
+                  setShelfItemsCollection(
+                    [Drink.id].concat(ShelfItemsCollection.slice(0, 15))
+                  )
+                }
+              >
+                <Tooltip title={<h2>{Drink.name}</h2>}>
+                  <img src={Drink.imageName} className="" alt={Drink.name} />
+                </Tooltip>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </DetailsPopup>
