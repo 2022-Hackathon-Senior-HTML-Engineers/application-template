@@ -11,9 +11,9 @@ const DrawingPad = () => {
     <ReactSketchCanvas
       style={styles}
       width="300px"
-      height="260px"
+      height="400px"
       strokeWidth={4}
-      strokeColor="#72DDF7"
+      strokeColor="red"
     />
   );
 };
