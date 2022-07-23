@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import CustomPopup from "../components/CustomPopup";
 import { useState } from "react"
+import { Grid } from "@mui/material";
+
 
 function Home() {
   const [visibility, setVisibility] = useState(false);
@@ -22,10 +24,7 @@ function Home() {
       </CustomPopup>
       <button className="drinks-button" onClick={(e) => setVisibility(!visibility)} >What drinks do you want?</button>
 
-      <h1> this is home</h1>
-
     </div >
   );
 };
-
 export default Home
