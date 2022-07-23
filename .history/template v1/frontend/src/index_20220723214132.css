@@ -183,18 +183,7 @@ input.error {
   width: 375px;
   margin: auto;
   background-color: green;
-  opacity: 0.5;
-  height: 145px;
-}
-
-.nav-left {
-  text-align: center;
-
-}
-
-.nav-right {
-text-align: left;
-padding: 5px 0 0 8px;
+  height: 150px;
 }
 
 .nav-container {
@@ -204,24 +193,6 @@ padding: 5px 0 0 8px;
 .nav-button {
   margin: 0 auto;
 }
-
-.back-button {
-
-}
-
-.back-button:hover {
-opacity: 0.6;
-cursor: pointer;
-}
-
-.details-button {
-
-}
-
-.details-button:hover {
-  opacity: 0.6;
-  cursor: pointer;
-  }
 
 /* CONTENT */
 

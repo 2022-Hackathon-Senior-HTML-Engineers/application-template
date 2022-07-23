@@ -211,7 +211,6 @@ padding: 5px 0 0 8px;
 
 .back-button:hover {
 opacity: 0.6;
-cursor: pointer;
 }
 
 .details-button {
@@ -220,7 +219,6 @@ cursor: pointer;
 
 .details-button:hover {
   opacity: 0.6;
-  cursor: pointer;
   }
 
 /* CONTENT */

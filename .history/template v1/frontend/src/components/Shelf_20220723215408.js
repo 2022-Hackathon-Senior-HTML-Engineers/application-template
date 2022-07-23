@@ -65,6 +65,7 @@ const Shelf = () => {
             <Grid item xs={6} md={8}>
             <div className="nav-right">
             <img src={BackButton} className="back-button"/>
+              <br />
               <h3>YOUR CURRENT TASK HERE</h3>
               <img
                 src={DetailsButton}

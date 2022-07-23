@@ -63,12 +63,12 @@ const Shelf = () => {
               
             </Grid>
             <Grid item xs={6} md={8}>
-            <div className="nav-right">
-            <img src={BackButton} className="back-button"/>
+            <div className="nav-right"><img src={BackButton} />
+              <br />
               <h3>YOUR CURRENT TASK HERE</h3>
               <img
                 src={DetailsButton}
-                className="details-button"
+                className=""
                 onClick={(e) => setVisibility(!visibility)}
               /></div>
               

@@ -188,13 +188,12 @@ input.error {
 }
 
 .nav-left {
-  text-align: center;
+  text-align: left;
 
 }
 
 .nav-right {
 text-align: left;
-padding: 5px 0 0 8px;
 }
 
 .nav-container {
@@ -209,19 +208,9 @@ padding: 5px 0 0 8px;
 
 }
 
-.back-button:hover {
-opacity: 0.6;
-cursor: pointer;
-}
-
 .details-button {
 
 }
-
-.details-button:hover {
-  opacity: 0.6;
-  cursor: pointer;
-  }
 
 /* CONTENT */
 

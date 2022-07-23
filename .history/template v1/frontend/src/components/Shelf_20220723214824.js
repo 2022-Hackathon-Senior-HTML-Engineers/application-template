@@ -57,23 +57,7 @@ const Shelf = () => {
           </div>
         </div>
         <div className="machine-bottom">
-        <Grid container spacing={0}>
-            <Grid item xs={6} md={4}>
-            <div className="nav-left"><h1>AYO</h1></div>
-              
-            </Grid>
-            <Grid item xs={6} md={8}>
-            <div className="nav-right">
-            <img src={BackButton} className="back-button"/>
-              <h3>YOUR CURRENT TASK HERE</h3>
-              <img
-                src={DetailsButton}
-                className="details-button"
-                onClick={(e) => setVisibility(!visibility)}
-              /></div>
-              
-            </Grid>
-          </Grid>
+
         </div>
       </div>
 
