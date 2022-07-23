@@ -94,7 +94,7 @@ const Shelf = () => {
         </div>
       </div>
 
-      <DetailsPopup
+      <CustomPopup
         onClose={popupCloseHandler}
         show={visibility}
         title="Drinks"
@@ -110,7 +110,7 @@ const Shelf = () => {
         <img src={Vodka} className="grid-item" />
         <img src={Tui} className="grid-item" />
 
-      </DetailsPopup>
+      </CustomPopup>
     </div>
   );
 };

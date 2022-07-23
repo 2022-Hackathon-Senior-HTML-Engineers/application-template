@@ -172,6 +172,7 @@ input.error {
   font-size: 30px;
   text-align: center;
   border-radius: 15px;
+display: inline-block;
 }
 
 .grid-item:hover {
