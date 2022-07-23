@@ -6,7 +6,6 @@ import { RecoilRoot } from "recoil";
 // pages & components
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Shelf from "./components/Shelf";
 
 function App() {
   return (
@@ -14,13 +13,13 @@ function App() {
       <RecoilRoot>
         <BrowserRouter>
           <Grid container spacing={0} columns={16}>
-            <Grid item xs={6}>
-              <div className="shelf-container">
-              <Shelf/>
+            <Grid item xs={4}>
+              <div className="left-side-nav">
+                <Navbar />
               </div>
             </Grid>
-            <Grid item xs={10}>
-              <div className="content-container">
+            <Grid item xs={12}>
+              <div className="right-side-nav">
                 <Routes>
                   <Route path="/" element={<Home />} />
                 </Routes>
