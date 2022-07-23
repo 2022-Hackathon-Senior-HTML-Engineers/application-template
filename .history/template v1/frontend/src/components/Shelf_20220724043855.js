@@ -283,6 +283,7 @@ const Shelf = () => {
           <Grid container spacing={0}>
             <Grid item xs={6} md={6}>
               <div className="pick-task-container">
+                <h2>Pick your task:</h2>
                 <div className="pick-task-content">
                   {" "}
                   {TasksCollection.map((Task, i) => (
@@ -296,20 +297,20 @@ const Shelf = () => {
                     </div>
                   ))}
                 </div>
-                <h4>Currently selected task:</h4>
-                <h5>{TasksCollection[currentSelection[0]].title}</h5>
+                <h2>Currently selected task:</h2>
               </div>
             </Grid>
             <Grid item xs={6} md={6}>
               <div className="pick-drink-container">
+                <h2>Pick your drink:</h2>
                 <div className="pick-drink-content">
                   <div className="grid-container-drinks-list">
                     {DrinksCollection.slice(0, 15).map((Drink, i) => (
                       <div
                         className="grid-item"
                         onClick={() =>
-                          setCurrentSelection(
-                            currentSelection[0].concat([i])
+                          setShelfItemsCollection(
+                            [Drink.id].concat(ShelfItemsCollection.slice(0, 15))
                           )
                         }
                       >
@@ -324,8 +325,6 @@ const Shelf = () => {
                     ))}
                   </div>
                 </div>
-                <h4>Currently selected drink:</h4>
-                <h5>{DrinksCollection[currentSelection[1]].name}</h5>
               </div>
             </Grid>
           </Grid>

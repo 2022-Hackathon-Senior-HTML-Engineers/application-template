@@ -297,7 +297,6 @@ const Shelf = () => {
                   ))}
                 </div>
                 <h4>Currently selected task:</h4>
-                <h5>{TasksCollection[currentSelection[0]].title}</h5>
               </div>
             </Grid>
             <Grid item xs={6} md={6}>
@@ -308,8 +307,8 @@ const Shelf = () => {
                       <div
                         className="grid-item"
                         onClick={() =>
-                          setCurrentSelection(
-                            currentSelection[0].concat([i])
+                          setShelfItemsCollection(
+                            [Drink.id].concat(ShelfItemsCollection.slice(0, 15))
                           )
                         }
                       >
@@ -325,7 +324,6 @@ const Shelf = () => {
                   </div>
                 </div>
                 <h4>Currently selected drink:</h4>
-                <h5>{DrinksCollection[currentSelection[1]].name}</h5>
               </div>
             </Grid>
           </Grid>

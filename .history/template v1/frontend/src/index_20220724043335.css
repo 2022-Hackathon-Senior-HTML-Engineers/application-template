@@ -165,7 +165,6 @@ input.error {
 }
 
 .grid-container-drinks-list {
-  margin-top: 12px;
   margin-left: 25px;
   width: 445px;
   display: grid;
@@ -266,14 +265,8 @@ input.error {
 }
 
 /* PICKING TASKS */
-.pick-task-container {
-  height: 100%;
-  text-align: center;
-  margin-top: 15px;
-}
-
 .pick-task-content {
-  height: 49vh;
+  height: 50vh;
   overflow-x: hidden;
   overflow-y: scroll;
   margin-top: 10px;
@@ -293,11 +286,6 @@ cursor: pointer;
   }
 
 /* PICKING DRINKS */
-.pick-drink-container {
-  height: 100%;
-  text-align: center;
-}
-
 .pick-drink-content {
   height: 50vh;
   margin-top: 10px;

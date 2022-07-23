@@ -273,7 +273,7 @@ input.error {
 }
 
 .pick-task-content {
-  height: 49vh;
+  height: 50vh;
   overflow-x: hidden;
   overflow-y: scroll;
   margin-top: 10px;
