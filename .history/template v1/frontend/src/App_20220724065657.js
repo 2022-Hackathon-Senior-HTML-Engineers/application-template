@@ -7,7 +7,6 @@ import { RecoilRoot } from "recoil";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Shelf from "./components/Shelf";
-import YoutubeVideo from "./pages/YoutubeVideo";
 
 function App() {
   return (
@@ -24,7 +23,7 @@ function App() {
               <div className="content-container">
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/youtube-player" element={<YoutubeVideo />} />
+                  <Route path="/youtube-video" element={<YoutubeVideo />} />
                 </Routes>
               </div>
             </Grid>
