@@ -93,16 +93,18 @@ const Shelf = () => {
         show={visibility}
         title="Drinks"
       >
-        <img src={Soju} className="grid-item" />
-        <img src={Juice} className="grid-item" />
-        <img src={RedBull} className="grid-item" />
-        <img src={MountGay} className="grid-item" />
-        <img src={Corona} className="grid-item" />
-        <img src={FireBall} className="grid-item" />
-        <img src={GingerBeer} className="grid-item" />
-        <img src={UpNGo} className="grid-item" />
-        <img src={Vodka} className="grid-item" />
-        <img src={Tui} className="grid-item" />
+        <div className="popup-div">
+          <img src={Soju} className="grid-item" />
+          <img src={Juice} className="grid-item" />
+          <img src={RedBull} className="grid-item" />
+          <img src={MountGay} className="grid-item" />
+          <img src={Corona} className="grid-item" />
+          <img src={FireBall} className="grid-item" />
+          <img src={GingerBeer} className="grid-item" />
+          <img src={UpNGo} className="grid-item" />
+          <img src={Vodka} className="grid-item" />
+          <img src={Tui} className="grid-item" />
+        </div>
       </DetailsPopup>
     </div>
   );
