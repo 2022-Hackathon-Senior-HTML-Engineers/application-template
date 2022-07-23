@@ -2,6 +2,11 @@ import { useEffect } from "react"
 import CustomPopup from "../components/CustomPopup";
 import { useState } from "react"
 import { Grid } from "@mui/material";
+import Soju from "../images/soju.png"
+import Juice from "../images/juice.png"
+import MountGay from "../images/mountGay.png"
+import RedBull from "../images/redBull.png"
+
 
 
 function Home() {
@@ -18,8 +23,11 @@ function Home() {
         show={visibility}
         title="Drinks"
       >
-        <h1>Hello This is Popup Content Area</h1>
-        <h2>This is my lorem ipsum text here!</h2>
+        <img src={Soju} />
+        <img src={Juice} />
+        <img src={RedBull} />
+        <img src={MountGay} />
+
 
       </CustomPopup>
       <button className="drinks-button" onClick={(e) => setVisibility(!visibility)} >What drinks do you want?</button>
