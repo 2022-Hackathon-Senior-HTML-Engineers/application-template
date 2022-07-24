@@ -33,9 +33,9 @@ const DrinksCollection = [
     { id: 12, name: "Juice", imageName: Juice },
     { id: 13, name: "Ginger Beer", imageName: GingerBeer },
     { id: 14, name: "Up & Go", imageName: UpNGo },
-    { id: 15, name: "Live Plus 😍 Nasser", imageName: Live },
-    { id: 16, name: "Chocolate Milk 😍 Daniel", imageName: ChocolateMilk },
-    { id: 17, name: "No Drink", imageName: NoDrink },
+    { id: 15, name: "No Drink", imageName: NoDrink },
+    { id: 16, name: "Live Plus 😍 Nasser", imageName: Live },
+    { id: 17, name: "Chocolate Milk 😍 Daniel", imageName: ChocolateMilk },
   ];
 
 

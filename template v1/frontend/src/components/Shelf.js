@@ -57,8 +57,8 @@ const Shelf = () => {
     [11, 11],
     [12, 12],
     [13, 13],
-    [17, 15],
-    [17, 16],
+    [16, 16],
+    [17, 17],
   ]);
 
   const [visibilityDetails, setVisibilityDetails] = useState(false);
