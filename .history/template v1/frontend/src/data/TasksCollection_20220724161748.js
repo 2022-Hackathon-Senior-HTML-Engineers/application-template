@@ -14,8 +14,8 @@ const TasksCollection = [
     { id: 9, title: "Plays a youtube video with less than 60 likes. Take a shot!" },
     { id: 10, title: "Repeats the same word at least 3 times in a row. Take a shot!" },
     { id: 11, title: "Has a full lag moment. Take a shot!" },
-    { id: 12, title: "Rude talks another department. Take a shot!" },
-    { id: 13, title: "Makes a pun related to another specialisation. Take a shot!" },
+    { id: 12, title: "Shit talks another department. Take a shot!" },
+    { id: 13, title: "Makes a pun related to a specialisation. Take a shot!" },
     {
       id: 14,
       title: "Has a promotion for something at the start of the lecture. Take a shot!",
