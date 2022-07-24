@@ -14,7 +14,7 @@ import Tui from "../images/drinks/tui.png";
 import { useEffect } from "react";
 import { useDrinksContext } from "../hooks/useDrinksContext";
 import PanoptoButton from "../images/panopto-button.png";
-import YoutubeButton from "../images/youtube-button.png";
+import YoutubeBUtton from "../images/youtube-button.png";
 
 //Profile Popup
 import DrinksGif2 from "../images/drinks-gif-2.gif";
