@@ -15,7 +15,7 @@ import { useEffect } from "react"
 import { useDrinksContext } from "../hooks/useDrinksContext"
 
 //Profile Popup
-import DrinksGif2 from "../images/drinks-gif-2.gif";
+import DrinksGif from "../images/drinks-gif.gif";
 
 // components
 import DrinkDetails from "../components/DrinkDetails"
@@ -52,9 +52,6 @@ const Home = () => {
         ))} */}
       </div>
       {/* <DrinkForm /> */}
-
-<div className="centerDrinks"><img src={DrinksGif2}/></div>
-      
 
 
       <CustomPopup

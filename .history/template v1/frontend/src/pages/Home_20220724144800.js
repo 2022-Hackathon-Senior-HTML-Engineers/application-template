@@ -53,8 +53,7 @@ const Home = () => {
       </div>
       {/* <DrinkForm /> */}
 
-<div className="centerDrinks"><img src={DrinksGif2}/></div>
-      
+      <img src={DrinksGif2}/>
 
 
       <CustomPopup

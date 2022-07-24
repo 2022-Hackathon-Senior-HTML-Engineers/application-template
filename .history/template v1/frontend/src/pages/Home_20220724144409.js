@@ -53,9 +53,6 @@ const Home = () => {
       </div>
       {/* <DrinkForm /> */}
 
-<div className="centerDrinks"><img src={DrinksGif2}/></div>
-      
-
 
       <CustomPopup
         onClose={popupCloseHandler}
