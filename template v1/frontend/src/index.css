@@ -396,7 +396,7 @@ input.error {
 }
 
 .drinks-button {
-  animation: wiggle 1.5s linear infinite;
+  animation: wiggle 2.5s linear infinite;
   position: absolute;
   left: calc(93% - 3em);
   top: calc(6% - 2em);
