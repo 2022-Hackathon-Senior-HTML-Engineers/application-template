@@ -5,6 +5,8 @@ import ReactPlayer from "react-player";
 
 import DrawingPad from "../components/DrawingBoard";
 
+import ViewAllTasksButton from "../images/view-all-tasks-button.png";
+
 const YoutubeVideo = () => {
   // State for youtube URL -> the thing you put in the brackets in useState() is just the default url it start with (can also be empty "")
   const [currentURL, setCurrentURL] = useState("insert-default-url-here");
@@ -41,7 +43,6 @@ const YoutubeVideo = () => {
       <div className="video-bottom-half">
         <Grid container spacing={2}>
           <Grid item xs={4}>
-          <div className="notepad-title"><h3>Notepad</h3></div>
             <div className="notepad-section">
               <textarea rows="10" cols="28" className="text-input-section">
                 Hello! Feel free to type up any notes here!
@@ -50,7 +51,6 @@ const YoutubeVideo = () => {
           </Grid>
           <Grid item xs={4}>
             <div className="drawing-pad-section">
-            <h3>Drawing Pad</h3>
               <DrawingPad />
             </div>
           </Grid>

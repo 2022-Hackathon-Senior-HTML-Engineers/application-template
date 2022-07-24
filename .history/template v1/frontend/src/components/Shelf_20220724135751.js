@@ -57,8 +57,8 @@ const Shelf = () => {
     [11, 11],
     [12, 12],
     [13, 13],
-    [16, 16],
-    [17, 17],
+    [17, 15],
+    [17, 15],
   ]);
 
   const [visibilityAllTasks, setVisibilityAllTasks] = useState(false);
@@ -235,8 +235,6 @@ const Shelf = () => {
           <h3>We ship Steven x Daniel 😇😋</h3>
           <br />
           <img src={BigUser} className="user" />
-          <br/>
-          <h3>Looking good today, you got no need to change your profile.</h3>
         </div>
       </ProfilePopup>
 
@@ -323,13 +321,13 @@ const Shelf = () => {
       <AllTasksPopup
         onClose={popupCloseAllTasksHandler}
         show={visibilityAllTasks}
-        title="All Current Tasks"
+        title="All Tasks"
       >
         <div>
           <div className="pick-task-content">
             {" "}
             {onDisplay.map((Task, i) => (
-              <div>
+              
                 {(() => {
                   if (Task[0] != 17) {
                     return (
@@ -340,9 +338,7 @@ const Shelf = () => {
                   } else {
                     return null;
                   }
-                })()}
-              </div>
-            ))}
+                })}
           </div>
         </div>
       </AllTasksPopup>

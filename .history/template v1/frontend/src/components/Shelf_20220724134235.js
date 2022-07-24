@@ -23,10 +23,10 @@ import AllTasksPopup from "../components/AllTasksPopup";
 import BackButton from "../images/back-button.png";
 import DetailsButton from "../images/details-button.png";
 import FinishButton from "../images/finish-button.png";
+import LecturesButton from "../images/lectures-button.png";
 import ResumeLastVideoButton from "../images/resume-last-video-button.png";
 import SetTasksButton from "../images/set-tasks-button.png";
 import User from "../images/user.png";
-import BigUser from "../images/big-user.png";
 import ProfileButton from "../images/profile-button.png";
 import LogOutButton from "../images/log-out-button.png";
 import ViewAllTasksButton from "../images/view-all-tasks-button.png";
@@ -57,8 +57,8 @@ const Shelf = () => {
     [11, 11],
     [12, 12],
     [13, 13],
-    [16, 16],
-    [17, 17],
+    [17, 15],
+    [17, 15],
   ]);
 
   const [visibilityAllTasks, setVisibilityAllTasks] = useState(false);
@@ -234,9 +234,7 @@ const Shelf = () => {
           <br />
           <h3>We ship Steven x Daniel 😇😋</h3>
           <br />
-          <img src={BigUser} className="user" />
-          <br/>
-          <h3>Looking good today, you got no need to change your profile.</h3>
+          <img src={User} className="user" />
         </div>
       </ProfilePopup>
 
@@ -321,29 +319,15 @@ const Shelf = () => {
       </TasksPopup>
 
       <AllTasksPopup
-        onClose={popupCloseAllTasksHandler}
-        show={visibilityAllTasks}
-        title="All Current Tasks"
+        onClose={popupCloseProfileHandler}
+        show={visibilityProfile}
+        title="Profile"
       >
         <div>
-          <div className="pick-task-content">
-            {" "}
-            {onDisplay.map((Task, i) => (
-              <div>
-                {(() => {
-                  if (Task[0] != 17) {
-                    return (
-                      <div className="pick-task-item">
-                        <p>{TasksCollection[Task[0]].title}</p>
-                      </div>
-                    );
-                  } else {
-                    return null;
-                  }
-                })()}
-              </div>
-            ))}
-          </div>
+          <br />
+          <h3>We ship Steven x Daniel 😇😋</h3>
+          <br />
+          <img src={User} className="user" />
         </div>
       </AllTasksPopup>
     </div>

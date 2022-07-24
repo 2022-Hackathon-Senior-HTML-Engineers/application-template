@@ -57,8 +57,8 @@ const Shelf = () => {
     [11, 11],
     [12, 12],
     [13, 13],
-    [16, 16],
-    [17, 17],
+    [17, 15],
+    [17, 15],
   ]);
 
   const [visibilityAllTasks, setVisibilityAllTasks] = useState(false);
@@ -95,6 +95,17 @@ const Shelf = () => {
             <div className="grid-container">
               {onDisplay.map((DisplayItem, i) => (
                 <div
+                {(() => {
+                  if (DisplayItem[0] != 17) {
+                    return (
+                      <div className="pick-task-item">
+                        <p>{TasksCollection[Task[0]].title}</p>
+                      </div>
+                    );
+                  } else {
+                    return null;
+                  }
+                })()}
                   className="grid-item"
                   onClick={() => (
                     setCurrentTaskState(DisplayItem[0]),
@@ -235,8 +246,6 @@ const Shelf = () => {
           <h3>We ship Steven x Daniel 😇😋</h3>
           <br />
           <img src={BigUser} className="user" />
-          <br/>
-          <h3>Looking good today, you got no need to change your profile.</h3>
         </div>
       </ProfilePopup>
 
