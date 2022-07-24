@@ -2,9 +2,7 @@
 .stopwatch {
     border: 3px solid #72ddf7;
     padding: 10px;
-    height: 205px;
-    padding-top: 40px;
-    padding-left: 20px;
+    height: 235px;
       
 }
 
@@ -22,9 +20,5 @@
 
 .buttons button {
     border-radius: 5px;
-}
-
-.numbers {
-    font-size: 7vh;
-    margin-left: 10px;
+    margin: 1%;
 }
