@@ -482,20 +482,11 @@ input.error {
 /* HOMEPAGE */
 .center-drinks {
   background-color: #8093F1;
-  height: 450px;
-  width: 450px;
+  height: 500px;
+  width: 500px;
   border-radius: 50%;
   text-align: center;
   position: relative;
   top: 40px;
   right: 230px;
-}
-
-.beer-gif {
-  height: 350px;
-  width: auto;
-}
-
-.homepage-buttons {
-  width:
 }
