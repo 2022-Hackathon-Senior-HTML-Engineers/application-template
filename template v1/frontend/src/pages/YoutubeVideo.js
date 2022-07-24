@@ -4,6 +4,7 @@ import { Grid } from "@mui/material";
 import ReactPlayer from "react-player";
 
 import DrawingPad from "../components/DrawingBoard";
+import Stopwatch from "../components/Stopwatch";
 
 const YoutubeVideo = () => {
   // State for youtube URL -> the thing you put in the brackets in useState() is just the default url it start with (can also be empty "")
@@ -56,8 +57,8 @@ const YoutubeVideo = () => {
           </Grid>
           <Grid item xs={4}>
             <div className="stopwatch-section">
-            <h3>Stopwatch</h3>
-              <h2>Add stopwatch here</h2>
+              <h3>Stopwatch</h3>
+              <Stopwatch/>
             </div>
           </Grid>
         </Grid>
