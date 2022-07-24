@@ -481,8 +481,8 @@ input.error {
 
 /* HOMEPAGE */
 .home-top-half {
-margin-top: 50px;
-margin-left: 250px;
+  /* width: 100%;
+height: 50vh; */
 }
 
 .home-bottom-half {
@@ -496,6 +496,8 @@ height: 50vh; */
   width: 450px;
   border-radius: 50%;
   text-align: center;
+  margin-top: 40px;
+  margin-right: 350px;
 }
 
 .beer-gif {

@@ -44,8 +44,8 @@ const Home = () => {
   // }, [dispatch])
 
   return (
-    <div className="">
-      <div className="">
+    <div className="home">
+      <div className="drinks">
         {/* <YoutubeEmbed embedId="rokGy0huYEA" /> */}
 
         {/* {drinks && drinks.map(drink => (
@@ -54,29 +54,22 @@ const Home = () => {
       </div>
       {/* <DrinkForm /> */}
 
-      <div className="home-top-half">
-        <div className="center-drinks">
-          <img src={DrinksGif2} className="beer-gif" />
-          <h1 style={{ fontSize: "8vh" }}>Beverage Binge</h1>
-        </div>
-      </div>
+<div className="home-top-half"><div className="center-drinks">
+        <img src={DrinksGif2} className="beer-gif"/>
+        <h1 style={{"fontSize":"8vh"}}>Beverage Binge</h1>
+      </div></div>
+      
 
-      <div className="home-bottom-half">
-        <div className="homepage-buttons">
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <div>
-                <img src={PanoptoButton} />
-              </div>
-            </Grid>
-            <Grid item xs={6}>
-              <div>
-                <img src={YoutubeButton} />
-              </div>
-            </Grid>
-          </Grid>
-        </div>
-      </div>
+      <div className="home-bottom-half"><div className="homepage-buttons">
+
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <div><img src={PanoptoButton} /></div>
+        </Grid>
+        <Grid item xs={6}><div><img src={YoutubeButton} /></div></Grid></Grid>
+
+      </div></div>
+      
 
       <CustomPopup onClose={popupCloseHandler} show={visibility} title="Drinks">
         <img src={Soju} className="grid-item" />

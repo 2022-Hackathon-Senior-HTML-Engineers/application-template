@@ -44,8 +44,8 @@ const Home = () => {
   // }, [dispatch])
 
   return (
-    <div className="">
-      <div className="">
+    <div className="home">
+      <div className="drinks">
         {/* <YoutubeEmbed embedId="rokGy0huYEA" /> */}
 
         {/* {drinks && drinks.map(drink => (

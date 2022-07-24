@@ -481,8 +481,7 @@ input.error {
 
 /* HOMEPAGE */
 .home-top-half {
-margin-top: 50px;
-margin-left: 250px;
+margin: 0 auto;
 }
 
 .home-bottom-half {
