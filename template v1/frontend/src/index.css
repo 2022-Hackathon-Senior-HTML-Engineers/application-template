@@ -250,6 +250,7 @@ input.error {
 
 .finish-button {
   margin-left: 83px;
+  animation: wiggle 1.5s linear infinite;
 }
 
 .finish-button:hover {
