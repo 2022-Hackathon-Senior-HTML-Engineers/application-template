@@ -39,22 +39,22 @@ const Shelf = () => {
   const [itemPosition, setItemPosition] = useState(0);
   const [currentSelection, setCurrentSelection] = useState([0, 0]);
   const [onDisplay, setOnDisplay] = useState([
-    [11, 16],
-    [4, 17],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
+    [0, 0],
+    [1, 1],
+    [2, 2],
+    [3, 3],
+    [4, 4],
+    [5, 5],
+    [6, 6],
+    [7, 7],
+    [8, 8],
+    [9, 9],
+    [10, 10],
+    [11, 11],
+    [12, 12],
+    [13, 13],
+    [16, 16],
+    [17, 17],
   ]);
 
   const [visibilityAllTasks, setVisibilityAllTasks] = useState(false);
@@ -231,7 +231,7 @@ const Shelf = () => {
           <h3>We ship Steven x Daniel 😇😋</h3>
           <br />
           <img src={BigUser} className="user" />
-          <br />
+          <br/>
           <h3>Looking good today, you got no need to change your profile.</h3>
         </div>
       </ProfilePopup>
@@ -243,7 +243,6 @@ const Shelf = () => {
       >
         <div>
           <br />
-          <h3>You haven't had enough drinks yet!</h3><br />
           <h3>Finish your drinks first and then log off! 😊</h3>
           <img src={DrinksGif} className="drinks-gif" />
         </div>

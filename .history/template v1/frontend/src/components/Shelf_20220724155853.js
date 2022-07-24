@@ -39,22 +39,22 @@ const Shelf = () => {
   const [itemPosition, setItemPosition] = useState(0);
   const [currentSelection, setCurrentSelection] = useState([0, 0]);
   const [onDisplay, setOnDisplay] = useState([
-    [11, 16],
-    [4, 17],
     [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
-    [17, 15],
+    [17, 16],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
+    [17, 17],
   ]);
 
   const [visibilityAllTasks, setVisibilityAllTasks] = useState(false);
@@ -243,7 +243,6 @@ const Shelf = () => {
       >
         <div>
           <br />
-          <h3>You haven't had enough drinks yet!</h3><br />
           <h3>Finish your drinks first and then log off! 😊</h3>
           <img src={DrinksGif} className="drinks-gif" />
         </div>

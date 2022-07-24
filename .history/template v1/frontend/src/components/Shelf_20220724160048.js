@@ -243,7 +243,7 @@ const Shelf = () => {
       >
         <div>
           <br />
-          <h3>You haven't had enough drinks yet!</h3><br />
+          <h3>You haven't had enough drinks yet!</h3>
           <h3>Finish your drinks first and then log off! 😊</h3>
           <img src={DrinksGif} className="drinks-gif" />
         </div>
