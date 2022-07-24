@@ -13,6 +13,8 @@ import Tui from "../images/drinks/tui.png";
 import OriginalSoju from "../images/drinks/original-soju.png";
 import GrapeSoju from "../images/drinks/grape-soju.png";
 import Pepsi from "../images/drinks/pepsi.png";
+import Live from "../images/drinks/live.png";
+import ChocolateMilk from "../images/drinks/choco.png";
 import NoDrink from "../images/drinks/no-drink.png";
 
 const DrinksCollection = [
@@ -31,7 +33,9 @@ const DrinksCollection = [
     { id: 12, name: "Juice", imageName: Juice },
     { id: 13, name: "Ginger Beer", imageName: GingerBeer },
     { id: 14, name: "Up & Go", imageName: UpNGo },
-    { id: 15, name: "No Drink", imageName: NoDrink },
+    { id: 15, name: "Live Plus 😍 Nasser", imageName: Live },
+    { id: 16, name: "Chocolate Milk 😍 Daniel", imageName: ChocolateMilk },
+    { id: 17, name: "No Drink", imageName: NoDrink },
   ];
 
 

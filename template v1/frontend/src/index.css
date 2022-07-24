@@ -250,6 +250,7 @@ input.error {
 
 .finish-button {
   margin-left: 83px;
+  animation: wiggle 1.5s linear infinite;
 }
 
 .finish-button:hover {
@@ -392,4 +393,48 @@ input.error {
 .user {
   height: 200px;
   width: auto;
+}
+
+.drinks-button {
+  animation: wiggle 2.5s linear infinite;
+  position: absolute;
+  left: calc(93% - 3em);
+  top: calc(6% - 2em);
+  
+  height: 5em;
+  width: 8em;
+  
+  background: #8093F1;
+  background: linear-gradient(top, #6e84f1, #95a4f3);
+  border: none;
+  border-top: 4px solid #72ddf7;
+  border-radius: 6px;
+  color: black;
+  font-family: Helvetica, Arial, Sans-serif;
+  font-size: 1em;
+  transform-origin: 50% 5em;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }
