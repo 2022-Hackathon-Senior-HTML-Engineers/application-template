@@ -217,8 +217,6 @@ const Shelf = () => {
           <h3>We ship Steven x Daniel 😇😋</h3>
           <br />
           <img src={User} className="user" />
-          <br/>
-          <h3>Looking good today, you got no need to change your profile.</h3>
         </div>
       </ProfilePopup>
 
