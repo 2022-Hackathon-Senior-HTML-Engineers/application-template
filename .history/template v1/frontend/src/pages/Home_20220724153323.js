@@ -58,35 +58,40 @@ const Home = () => {
       <div className="home-top-half">
         <div className="center-drinks">
           <img src={DrinksGif2} className="beer-gif" />
-          <br/><br/>
-          <h2 style={{ color: "white", paddingLeft: "15%", paddingRight: "15%"}}>
-            Turning lectures into drinking games!
-          </h2>
+          <h2 style={{ color: "white" }}>Turning lectures into drinking games!</h2>
         </div>
       </div>
 
       <div className="home-bottom-half">
         <div className="homepage-buttons">
           <Grid container spacing={2}>
-          <Link to="/player"><Grid item xs={6}>
-              <div>
-                <img src={PanoptoButton} className="nav-button center-me-please" />
+            <Grid item xs={6}>
+              <div className="center-me-please">
+                <img src={PanoptoButton} />
               </div>
-            </Grid></Link>
-            <Link to="/player"><Grid item xs={6}>
+            </Grid>
+            <Grid item xs={6}>
               <div>
-                <img src={YoutubeButton} className="nav-button center-me-please" />
+                <img src={YoutubeButton} />
               </div>
-            </Grid></Link>
-            
+            </Grid>
           </Grid>
         </div>
       </div>
 
-      {/* <CustomPopup onClose={popupCloseHandler} show={visibility} title="Drinks">
-
-      </CustomPopup> */}
-      <img src={Logo} className="drinks-button" />
+      <CustomPopup onClose={popupCloseHandler} show={visibility} title="Drinks">
+        <img src={Soju} className="grid-item" />
+        <img src={Juice} className="grid-item" />
+        <img src={RedBull} className="grid-item" />
+        <img src={MountGay} className="grid-item" />
+        <img src={Corona} className="grid-item" />
+        <img src={FireBall} className="grid-item" />
+        <img src={GingerBeer} className="grid-item" />
+        <img src={UpNGo} className="grid-item" />
+        <img src={Vodka} className="grid-item" />
+        <img src={Tui} className="grid-item" />
+      </CustomPopup>
+      <img src={Logo} className="drinks-button"/>
     </div>
   );
 };

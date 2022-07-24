@@ -73,12 +73,12 @@ const Home = () => {
                 <img src={PanoptoButton} className="nav-button center-me-please" />
               </div>
             </Grid></Link>
-            <Link to="/player"><Grid item xs={6}>
+            
+            <Grid item xs={6}>
               <div>
                 <img src={YoutubeButton} className="nav-button center-me-please" />
               </div>
-            </Grid></Link>
-            
+            </Grid>
           </Grid>
         </div>
       </div>

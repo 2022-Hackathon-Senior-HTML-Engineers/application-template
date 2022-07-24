@@ -445,7 +445,7 @@ input.error {
   background: #8093F1;
   background: linear-gradient(top, #6e84f1, #95a4f3);
   border: none;
-  /* border: 4px solid #72ddf7; */
+  border: 4px solid #72ddf7;
   border-radius: 6px;
   color: black;
   font-family: Helvetica, Arial, Sans-serif;
@@ -486,7 +486,6 @@ margin-left: 250px;
 }
 
 .home-bottom-half {
-  margin-top: 5%;
   width: 100%;
 }
 
@@ -499,7 +498,7 @@ margin-left: 250px;
 }
 
 .beer-gif {
-  height: 300px;
+  height: 310px;
   width: auto;
 }
 
@@ -507,5 +506,5 @@ margin-left: 250px;
 }
 
 .center-me-please {
-  margin-left: 100px;
+  margin: 0 auto;
 }

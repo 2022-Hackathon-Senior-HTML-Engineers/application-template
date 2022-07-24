@@ -68,24 +68,21 @@ const Home = () => {
       <div className="home-bottom-half">
         <div className="homepage-buttons">
           <Grid container spacing={2}>
-          <Link to="/player"><Grid item xs={6}>
+            <Grid item xs={6}>
               <div>
                 <img src={PanoptoButton} className="nav-button center-me-please" />
               </div>
-            </Grid></Link>
-            <Link to="/player"><Grid item xs={6}>
+            </Grid>
+            <Grid item xs={6}>
               <div>
                 <img src={YoutubeButton} className="nav-button center-me-please" />
               </div>
-            </Grid></Link>
-            
+            </Grid>
           </Grid>
         </div>
       </div>
 
-      {/* <CustomPopup onClose={popupCloseHandler} show={visibility} title="Drinks">
-
-      </CustomPopup> */}
+?
       <img src={Logo} className="drinks-button" />
     </div>
   );

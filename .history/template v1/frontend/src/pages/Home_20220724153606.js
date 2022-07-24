@@ -59,7 +59,7 @@ const Home = () => {
         <div className="center-drinks">
           <img src={DrinksGif2} className="beer-gif" />
           <br/><br/>
-          <h2 style={{ color: "white", paddingLeft: "15%", paddingRight: "15%"}}>
+          <h2 style={{ color: "white" }}>
             Turning lectures into drinking games!
           </h2>
         </div>
@@ -68,24 +68,32 @@ const Home = () => {
       <div className="home-bottom-half">
         <div className="homepage-buttons">
           <Grid container spacing={2}>
-          <Link to="/player"><Grid item xs={6}>
+            <Grid item xs={6}>
               <div>
                 <img src={PanoptoButton} className="nav-button center-me-please" />
               </div>
-            </Grid></Link>
-            <Link to="/player"><Grid item xs={6}>
+            </Grid>
+            <Grid item xs={6}>
               <div>
                 <img src={YoutubeButton} className="nav-button center-me-please" />
               </div>
-            </Grid></Link>
-            
+            </Grid>
           </Grid>
         </div>
       </div>
 
-      {/* <CustomPopup onClose={popupCloseHandler} show={visibility} title="Drinks">
-
-      </CustomPopup> */}
+      <CustomPopup onClose={popupCloseHandler} show={visibility} title="Drinks">
+        <img src={Soju} className="grid-item" />
+        <img src={Juice} className="grid-item" />
+        <img src={RedBull} className="grid-item" />
+        <img src={MountGay} className="grid-item" />
+        <img src={Corona} className="grid-item" />
+        <img src={FireBall} className="grid-item" />
+        <img src={GingerBeer} className="grid-item" />
+        <img src={UpNGo} className="grid-item" />
+        <img src={Vodka} className="grid-item" />
+        <img src={Tui} className="grid-item" />
+      </CustomPopup>
       <img src={Logo} className="drinks-button" />
     </div>
   );
