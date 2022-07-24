@@ -146,6 +146,7 @@ const Shelf = () => {
                       className="details-button"
                       onClick={(e) => setVisibilityDetails(!visibilityDetails)}
                     />
+                                <img src={ViewAllTasksButton} className="nav-button"/>
                   </div>
                 </Grid>
               </Grid>

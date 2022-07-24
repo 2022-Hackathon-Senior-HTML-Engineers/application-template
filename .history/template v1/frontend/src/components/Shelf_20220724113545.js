@@ -146,6 +146,7 @@ const Shelf = () => {
                       className="details-button"
                       onClick={(e) => setVisibilityDetails(!visibilityDetails)}
                     />
+                                <img src={ViewAllTasksButton} className="nav-button"/>
                   </div>
                 </Grid>
               </Grid>
@@ -165,7 +166,7 @@ const Shelf = () => {
                   </Grid>
                   <Grid item xs={6} md={8}>
                     <div className="nav-right-2">
-                      <img src={ViewAllTasksButton} className="nav-button" />
+                      <img src={LecturesButton} className="nav-button" />
                       <img
                         src={SetTasksButton}
                         className="nav-button"

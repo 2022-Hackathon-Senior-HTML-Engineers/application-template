@@ -5,8 +5,6 @@ import ReactPlayer from "react-player";
 
 import DrawingPad from "../components/DrawingBoard";
 
-import ViewAllTasksButton from "../images/view-all-tasks-button.png";
-
 const YoutubeVideo = () => {
   // State for youtube URL -> the thing you put in the brackets in useState() is just the default url it start with (can also be empty "")
   const [currentURL, setCurrentURL] = useState("insert-default-url-here");
@@ -26,13 +24,14 @@ const YoutubeVideo = () => {
         <Grid item xs={4}>
           <div className="video-title-section">
             <h3>
-              AofA Lecture 28: Running time for
+              You're currently watching: AofA Lecture 28: Running time for
               Dijkstra and when Dijkstra fails
             </h3>
             <br />
             <h4>
-              You can keep track of your progress through the tasks using the notepad, drawing pad, and stopwatch!
-            </h4><br/>
+              Don't forget to keep track of your progress through the tasks!
+            </h4>
+            <img src={ViewAllTasksButton}/>
           </div>
         </Grid>
       </Grid>

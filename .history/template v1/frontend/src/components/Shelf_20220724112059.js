@@ -26,7 +26,6 @@ import SetTasksButton from "../images/set-tasks-button.png";
 import User from "../images/user.png";
 import ProfileButton from "../images/profile-button.png";
 import LogOutButton from "../images/log-out-button.png";
-import ViewAllTasksButton from "../images/view-all-tasks-button.png";
 
 
 const Shelf = () => {
@@ -165,7 +164,7 @@ const Shelf = () => {
                   </Grid>
                   <Grid item xs={6} md={8}>
                     <div className="nav-right-2">
-                      <img src={ViewAllTasksButton} className="nav-button" />
+                      <img src={LecturesButton} className="nav-button" />
                       <img
                         src={SetTasksButton}
                         className="nav-button"

@@ -31,8 +31,9 @@ const YoutubeVideo = () => {
             </h3>
             <br />
             <h4>
-              You can keep track of your progress through the tasks using the notepad, drawing pad, and stopwatch!
+              Don't forget to keep track of your progress through the tasks!
             </h4><br/>
+            <img src={ViewAllTasksButton} className="nav-button"/>
           </div>
         </Grid>
       </Grid>

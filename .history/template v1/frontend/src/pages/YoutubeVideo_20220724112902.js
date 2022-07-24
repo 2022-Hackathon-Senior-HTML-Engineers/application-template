@@ -26,13 +26,14 @@ const YoutubeVideo = () => {
         <Grid item xs={4}>
           <div className="video-title-section">
             <h3>
-              AofA Lecture 28: Running time for
+              You're currently watching: AofA Lecture 28: Running time for
               Dijkstra and when Dijkstra fails
             </h3>
             <br />
             <h4>
-              You can keep track of your progress through the tasks using the notepad, drawing pad, and stopwatch!
-            </h4><br/>
+              Don't forget to keep track of your progress through the tasks!
+            </h4>
+            <img src={ViewAllTasksButton} className="nav-button"/>
           </div>
         </Grid>
       </Grid>
