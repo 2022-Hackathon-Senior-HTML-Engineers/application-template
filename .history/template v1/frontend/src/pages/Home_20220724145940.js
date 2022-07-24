@@ -13,8 +13,6 @@ import Vodka from "../images/popUpDrinks/vodka.png";
 import Tui from "../images/drinks/tui.png";
 import { useEffect } from "react";
 import { useDrinksContext } from "../hooks/useDrinksContext";
-import PanoptoButton from "../images/panopto-button.png";
-import YoutubeButton from "../images/youtube-button.png";
 
 //Profile Popup
 import DrinksGif2 from "../images/drinks-gif-2.gif";
@@ -55,18 +53,8 @@ const Home = () => {
       {/* <DrinkForm /> */}
 
       <div className="center-drinks">
-        <img src={DrinksGif2} className="beer-gif"/>
-        <h1 style={{"fontSize":"8vh"}}>Beverage Binge</h1>
-      </div>
-
-      <div className="homepage-buttons">
-
-      <Grid container spacing={4}>
-        <Grid item xs={6}>
-          <div><img src={PanoptoButton} /></div>
-        </Grid>
-        <Grid item xs={6}><div><img src={YoutubeButton} /></div></Grid></Grid>
-
+        <img src={DrinksGif2} />
+        <h1>Beverage Binge</h1>
       </div>
 
       <CustomPopup onClose={popupCloseHandler} show={visibility} title="Drinks">

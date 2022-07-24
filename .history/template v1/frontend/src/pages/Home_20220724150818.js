@@ -55,7 +55,7 @@ const Home = () => {
       {/* <DrinkForm /> */}
 
       <div className="center-drinks">
-        <img src={DrinksGif2} className="beer-gif"/>
+        <img src={DrinksGif2} />
         <h1 style={{"fontSize":"8vh"}}>Beverage Binge</h1>
       </div>
 

@@ -14,7 +14,7 @@ import Tui from "../images/drinks/tui.png";
 import { useEffect } from "react";
 import { useDrinksContext } from "../hooks/useDrinksContext";
 import PanoptoButton from "../images/panopto-button.png";
-import YoutubeButton from "../images/youtube-button.png";
+import YoutubeBUtton from "../images/youtube-button.png";
 
 //Profile Popup
 import DrinksGif2 from "../images/drinks-gif-2.gif";
@@ -55,7 +55,7 @@ const Home = () => {
       {/* <DrinkForm /> */}
 
       <div className="center-drinks">
-        <img src={DrinksGif2} className="beer-gif"/>
+        <img src={DrinksGif2} />
         <h1 style={{"fontSize":"8vh"}}>Beverage Binge</h1>
       </div>
 

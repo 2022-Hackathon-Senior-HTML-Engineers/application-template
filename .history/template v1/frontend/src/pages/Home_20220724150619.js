@@ -13,8 +13,6 @@ import Vodka from "../images/popUpDrinks/vodka.png";
 import Tui from "../images/drinks/tui.png";
 import { useEffect } from "react";
 import { useDrinksContext } from "../hooks/useDrinksContext";
-import PanoptoButton from "../images/panopto-button.png";
-import YoutubeButton from "../images/youtube-button.png";
 
 //Profile Popup
 import DrinksGif2 from "../images/drinks-gif-2.gif";
@@ -55,7 +53,7 @@ const Home = () => {
       {/* <DrinkForm /> */}
 
       <div className="center-drinks">
-        <img src={DrinksGif2} className="beer-gif"/>
+        <img src={DrinksGif2} />
         <h1 style={{"fontSize":"8vh"}}>Beverage Binge</h1>
       </div>
 
@@ -63,9 +61,9 @@ const Home = () => {
 
       <Grid container spacing={4}>
         <Grid item xs={6}>
-          <div><img src={PanoptoButton} /></div>
+          <div></div>
         </Grid>
-        <Grid item xs={6}><div><img src={YoutubeButton} /></div></Grid></Grid>
+        <Grid item xs={6}></Grid></Grid>
 
       </div>
 
