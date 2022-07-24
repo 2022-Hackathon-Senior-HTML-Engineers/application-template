@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .stopwatch {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
+    border: 3px solid #72ddf7;
     padding: 10px;
       
 }
 
 .buttons {
-    background-color: #4CAF50; /* Green */
+    background-color: #8093f1; 
     border: white;
     color: white;
     padding: 15px 32px;

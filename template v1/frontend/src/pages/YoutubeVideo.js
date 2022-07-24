@@ -57,6 +57,8 @@ const YoutubeVideo = () => {
           </Grid>
           <Grid item xs={4}>
             <div className="stopwatch-section">
+              <h3>Stopwatch</h3>
+              <Stopwatch/>
             </div>
           </Grid>
         </Grid>
