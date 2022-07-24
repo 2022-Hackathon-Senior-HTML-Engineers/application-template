@@ -333,8 +333,8 @@ input.error {
   /* background-image: url("./images/video-info-background.png"); */
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: 448px;
-  width: 273.65px; */
+  height: 448px;
+  width: 273.65px;
 }
 
 .video-title-section {

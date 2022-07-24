@@ -24,7 +24,7 @@ const YoutubeVideo = () => {
           </div>
         </Grid>
         <Grid item xs={4}>
-          <div className="video-info-wrapper">
+          <div className="video-info-section">
             {" "}
             <div className="video-title-section">
               <h3>

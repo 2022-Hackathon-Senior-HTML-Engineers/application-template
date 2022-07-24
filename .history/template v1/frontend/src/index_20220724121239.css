@@ -330,7 +330,7 @@ input.error {
 }
 
 .video-info-wrapper {
-  /* background-image: url("./images/video-info-background.png"); */
+  background-image: url("./images/video-info-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   /* height: 448px;
