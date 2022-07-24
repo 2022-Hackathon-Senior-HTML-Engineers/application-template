@@ -58,6 +58,7 @@ const Shelf = () => {
   ]);
 
   const [visibilityAllTasks, setVisibilityAllTasks] = useState(false);
+  const [visibilityDetails, setVisibilityDetails] = useState(false);
   const [visibilityTasks, setVisibilityTasks] = useState(false);
   const [visibilityProfile, setVisibilityProfile] = useState(false);
   const [visibilityLogout, setVisibilityLogout] = useState(false);
@@ -66,6 +67,9 @@ const Shelf = () => {
     setVisibilityAllTasks(e);
   };
 
+  const popupCloseDetailsHandler = (e) => {
+    setVisibilityDetails(e);
+  };
 
   const popupCloseTasksHandler = (e) => {
     setVisibilityTasks(e);
@@ -149,13 +153,12 @@ const Shelf = () => {
                         {TasksCollection[[currentTaskState]].title}
                       </h5>
                     </div>
-                                          <img
-                        src={ViewAllTasksButton}
-                        className="nav-button"
-                        onClick={(e) =>
-                          setVisibilityAllTasks(!visibilityAllTasks)
-                        }
-                      />
+
+                    <img
+                      src={DetailsButton}
+                      className="details-button"
+                      onClick={(e) => setVisibilityDetails(!visibilityDetails)}
+                    />
                   </div>
                 </Grid>
               </Grid>
@@ -212,6 +215,11 @@ const Shelf = () => {
           )}
         </div>
       </div>
+      <CustomPopup
+        onClose={popupCloseDetailsHandler}
+        show={visibilityDetails}
+        title="Details"
+      ></CustomPopup>
 
       <ProfilePopup
         onClose={popupCloseProfileHandler}
