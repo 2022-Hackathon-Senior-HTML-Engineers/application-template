@@ -28,7 +28,7 @@ const YoutubeVideo = () => {
             {" "}
             <div className="video-title-section">
               <h4>
-                Currently watching: AofA Lecture 28: Running time for Dijkstra and when Dijkstra
+                AofA Lecture 28: Running time for Dijkstra and when Dijkstra
                 fails
               </h4>
               <h5>
@@ -43,8 +43,6 @@ const YoutubeVideo = () => {
       <div className="video-bottom-half">
         <Grid container spacing={2}>
           <Grid item xs={4}>
-          <div className="notepad-title"><h3>Notepad</h3></div>
-          
             <div className="notepad-section">
               <textarea rows="10" cols="28" className="text-input-section">
                 Hello! Feel free to type up any notes here!
@@ -53,13 +51,11 @@ const YoutubeVideo = () => {
           </Grid>
           <Grid item xs={4}>
             <div className="drawing-pad-section">
-            <h3>Drawing Pad</h3>
               <DrawingPad />
             </div>
           </Grid>
           <Grid item xs={4}>
             <div className="stopwatch-section">
-            <h3>Stopwatch</h3>
               <h2>Add stopwatch here</h2>
             </div>
           </Grid>

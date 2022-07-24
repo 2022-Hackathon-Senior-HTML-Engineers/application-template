@@ -43,9 +43,8 @@ const YoutubeVideo = () => {
       <div className="video-bottom-half">
         <Grid container spacing={2}>
           <Grid item xs={4}>
-          <div className="notepad-title"><h3>Notepad</h3></div>
-          
             <div className="notepad-section">
+            <h3>Notepad</h3>
               <textarea rows="10" cols="28" className="text-input-section">
                 Hello! Feel free to type up any notes here!
               </textarea>
