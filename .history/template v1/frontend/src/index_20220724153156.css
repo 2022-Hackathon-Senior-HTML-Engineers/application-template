@@ -496,10 +496,11 @@ height: 50vh; */
   width: 450px;
   border-radius: 50%;
   text-align: center;
+  padding: 5%;
 }
 
 .beer-gif {
-  height: 310px;
+  height: 320px;
   width: auto;
 }
 

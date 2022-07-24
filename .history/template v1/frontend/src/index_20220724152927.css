@@ -491,7 +491,7 @@ height: 50vh; */
 }
 
 .center-drinks {
-  background-image: linear-gradient(#8093F1, #72DDF7);
+  background-image: linear-gradient(#8093F1, yellow);
   height: 450px;
   width: 450px;
   border-radius: 50%;
@@ -499,7 +499,7 @@ height: 50vh; */
 }
 
 .beer-gif {
-  height: 310px;
+  height: 350px;
   width: auto;
 }
 

@@ -58,7 +58,7 @@ const Home = () => {
       <div className="home-top-half">
         <div className="center-drinks">
           <img src={DrinksGif2} className="beer-gif" />
-          <h2 style={{ color: "white" }}>Turning lectures into drinking games!</h2>
+          <h1 style={{ color: "white" }}>Beverage Binge</h1>
         </div>
       </div>
 

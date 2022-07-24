@@ -15,7 +15,6 @@ import { useEffect } from "react";
 import { useDrinksContext } from "../hooks/useDrinksContext";
 import PanoptoButton from "../images/panopto-button.png";
 import YoutubeButton from "../images/youtube-button.png";
-import Logo from "../images/Logo/LOGO.png";
 
 //Profile Popup
 import DrinksGif2 from "../images/drinks-gif-2.gif";
@@ -58,7 +57,7 @@ const Home = () => {
       <div className="home-top-half">
         <div className="center-drinks">
           <img src={DrinksGif2} className="beer-gif" />
-          <h2 style={{ color: "white" }}>Turning lectures into drinking games!</h2>
+          <h1 style={{ fontSize: "8vh" }}>Beverage Binge</h1>
         </div>
       </div>
 

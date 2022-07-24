@@ -439,13 +439,13 @@ input.error {
   left: calc(93% - 3em);
   top: calc(6% - 2em);
   
-  height: 8em;
+  height: 7em;
   width: 8em;
   
   background: #8093F1;
   background: linear-gradient(top, #6e84f1, #95a4f3);
   border: none;
-  border: 4px solid #72ddf7;
+  border-top: 4px solid #72ddf7;
   border-radius: 6px;
   color: black;
   font-family: Helvetica, Arial, Sans-serif;
@@ -491,7 +491,7 @@ height: 50vh; */
 }
 
 .center-drinks {
-  background-image: linear-gradient(#8093F1, #72DDF7);
+  background-color: #8093F1;
   height: 450px;
   width: 450px;
   border-radius: 50%;
@@ -499,7 +499,7 @@ height: 50vh; */
 }
 
 .beer-gif {
-  height: 310px;
+  height: 350px;
   width: auto;
 }
 
