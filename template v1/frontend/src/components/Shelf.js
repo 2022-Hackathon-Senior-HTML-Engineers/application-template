@@ -29,6 +29,7 @@ import ViewAllTasksButton from "../images/view-all-tasks-button.png";
 
 //Profile Popup
 import DrinksGif from "../images/drinks-gif.gif";
+import { useReward } from 'react-rewards';
 
 const Shelf = () => {
   const [currentNavState, setCurrentNavState] =
@@ -78,6 +79,9 @@ const Shelf = () => {
   const popupCloseLogoutHandler = (e) => {
     setVisibilityLogout(e);
   };
+
+  const { reward: confettiReward, isAnimating: isConfettiAnimating } = useReward('confettiReward', 'confetti');
+  const { reward: balloonsReward, isAnimating: isBalloonsAnimating } = useReward('balloonsReward', 'balloons');
 
   return (
     <div>
@@ -130,32 +134,41 @@ const Shelf = () => {
                         onClick={(e) => setCurrentNavState(!currentNavState)}
                       />
                     </Link>
+                    <div id="balloonsReward">
+                      <div id="confettiReward">
+                        <img
+                          disabled={isConfettiAnimating || isBalloonsAnimating}
 
-                    <img
-                      src={FinishButton}
-                      className="finish-button"
-                      onClick={() =>
-                        setOnDisplay(
-                          [].concat(
-                            onDisplay.slice(0, itemPosition),
-                            onDisplay.slice(itemPosition + 1, 16),
-                            [[17, 15]]
-                          )
-                        )
-                      }
-                    />
+                          src={FinishButton}
+                          className="finish-button"
+                          onClick={() => {
+                            confettiReward();
+                            balloonsReward();
+
+                            setOnDisplay(
+                              [].concat(
+                                onDisplay.slice(0, itemPosition),
+                                onDisplay.slice(itemPosition + 1, 16),
+                                [[17, 15]]
+                              )
+                            )
+                          }
+                          }
+                        />
+                      </div>
+                    </div>
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
                         {TasksCollection[[currentTaskState]].title}
                       </h5>
                     </div>
-                                          <img
-                        src={ViewAllTasksButton}
-                        className="nav-button"
-                        onClick={(e) =>
-                          setVisibilityAllTasks(!visibilityAllTasks)
-                        }
-                      />
+                    <img
+                      src={ViewAllTasksButton}
+                      className="nav-button"
+                      onClick={(e) =>
+                        setVisibilityAllTasks(!visibilityAllTasks)
+                      }
+                    />
                   </div>
                 </Grid>
               </Grid>
