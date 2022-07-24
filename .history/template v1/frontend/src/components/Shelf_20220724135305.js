@@ -321,24 +321,14 @@ const Shelf = () => {
       <AllTasksPopup
         onClose={popupCloseAllTasksHandler}
         show={visibilityAllTasks}
-        title="All Current Tasks"
+        title="All Tasks"
       >
         <div>
           <div className="pick-task-content">
             {" "}
             {onDisplay.map((Task, i) => (
-              <div>
-                {(() => {
-                  if (Task[0] != 17) {
-                    return (
-                      <div className="pick-task-item">
-                        <p>{TasksCollection[Task[0]].title}</p>
-                      </div>
-                    );
-                  } else {
-                    return null;
-                  }
-                })()}
+              <div className="pick-task-item">
+                <p>{TasksCollection[Task[0]].title}</p>
               </div>
             ))}
           </div>

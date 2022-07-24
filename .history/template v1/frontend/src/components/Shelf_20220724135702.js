@@ -321,13 +321,13 @@ const Shelf = () => {
       <AllTasksPopup
         onClose={popupCloseAllTasksHandler}
         show={visibilityAllTasks}
-        title="All Current Tasks"
+        title="All Tasks"
       >
         <div>
           <div className="pick-task-content">
             {" "}
             {onDisplay.map((Task, i) => (
-              <div>
+              
                 {(() => {
                   if (Task[0] != 17) {
                     return (
@@ -339,7 +339,6 @@ const Shelf = () => {
                     return null;
                   }
                 })()}
-              </div>
             ))}
           </div>
         </div>
