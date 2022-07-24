@@ -6,3 +6,4 @@ npm install mongoose
 
 npm install react
 npm i
+npm install react-stopwatch

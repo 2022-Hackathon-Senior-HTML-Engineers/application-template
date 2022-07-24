@@ -4,6 +4,7 @@ import { Grid } from "@mui/material";
 import ReactPlayer from "react-player";
 
 import DrawingPad from "../components/DrawingBoard";
+import Stopwatch from "../components/Stopwatch";
 
 const YoutubeVideo = () => {
 
@@ -46,7 +47,9 @@ const YoutubeVideo = () => {
             </div>
           </Grid>
           <Grid item xs={4}>
-            <div className="stopwatch-section"><h2>Add stopwatch here</h2></div>
+            <div className="stopwatch-section">
+              <Stopwatch/>
+            </div>
           </Grid>
         </Grid>
       </div>
