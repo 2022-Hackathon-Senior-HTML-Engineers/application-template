@@ -3,10 +3,10 @@ import { Grid } from "@mui/material";
 import { useRecoilState } from "recoil";
 import { Tooltip } from "@mui/material";
 import { useState } from "react";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import Snackbar from "@mui/material/Snackbar";
-import MuiAlert, { AlertProps } from "@mui/material/Alert";
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
 import { currentShelfState } from "../atoms/currentShelfState";
 import { itemState } from "../atoms/currentItemState";
@@ -32,7 +32,9 @@ import LogOutButton from "../images/log-out-button.png";
 import ViewAllTasksButton from "../images/view-all-tasks-button.png";
 
 //Profile Popup
-import DrinksGif from "../images/drinks-gif.gif";
+import DrinksGif from "../images/drinks-gif.gif"
+
+
 
 const Shelf = () => {
   const [currentNavState, setCurrentNavState] =
@@ -81,11 +83,11 @@ const Shelf = () => {
 
   const popupCloseProfileHandler = (e) => {
     setVisibilityProfile(e);
-  };
+  }
 
   const popupCloseLogoutHandler = (e) => {
     setVisibilityLogout(e);
-  };
+  }
 
   return (
     <div>
@@ -97,14 +99,10 @@ const Shelf = () => {
                 <div
                   className="grid-item"
                   onClick={() => (
-                    setCurrentTaskState(DisplayItem[0]),
-                    setCurrentDrinkState(DisplayItem[1]),
-                    setItemPosition(i)
+                    setCurrentTaskState(DisplayItem[0]), setCurrentDrinkState(DisplayItem[1]), setItemPosition(i)
                   )}
                 >
-                  <Tooltip
-                    title={<h2>{DrinksCollection[DisplayItem[1]].name}</h2>}
-                  >
+                  <Tooltip title={<h2>{DrinksCollection[DisplayItem[1]].name}</h2>}>
                     <img
                       src={DrinksCollection[DisplayItem[1]].imageName}
                       className=""
@@ -123,7 +121,10 @@ const Shelf = () => {
                 <Grid item xs={6} md={4}>
                   <div className="nav-left">
                     <img
-                      src={DrinksCollection[currentDrinkState].imageName}
+                      src={
+                        DrinksCollection[currentDrinkState]
+                          .imageName
+                      }
                       className=""
                       alt="item"
                     />
@@ -131,14 +132,11 @@ const Shelf = () => {
                 </Grid>
                 <Grid item xs={6} md={8}>
                   <div className="nav-right">
-                    <Link to="/">
-                      <img
-                        src={BackButton}
-                        className="back-button"
-                        onClick={(e) => setCurrentNavState(!currentNavState)}
-                      />
-                    </Link>
-
+                    <img
+                      src={BackButton}
+                      className="back-button"
+                      onClick={(e) => setCurrentNavState(!currentNavState)}
+                    />
                     <img
                       src={FinishButton}
                       className="finish-button"
@@ -146,15 +144,22 @@ const Shelf = () => {
                         setOnDisplay(
                           [].concat(
                             onDisplay.slice(0, itemPosition),
-                            onDisplay.slice(itemPosition + 1, 16),
+                            onDisplay.slice(
+                              itemPosition + 1,
+                              16
+                            ),
                             [[17, 15]]
                           )
                         )
+
                       }
                     />
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
-                        {TasksCollection[[currentTaskState]].title}
+                        {
+                          TasksCollection[[currentTaskState]
+                          ].title
+                        }
                       </h5>
                     </div>
 
@@ -175,42 +180,25 @@ const Shelf = () => {
                     <div className="nav-left-2">
                       <img src={User} className="" />
                       <br />
-                      <img
-                        src={ProfileButton}
-                        className="nav-button"
-                        onClick={(e) =>
-                          setVisibilityProfile(!visibilityProfile)
-                        }
-                      />
+                      <img src={ProfileButton} className="nav-button" onClick={(e) => setVisibilityProfile(!visibilityProfile)} />
                       <br />
-                      <img
-                        src={LogOutButton}
-                        className="nav-button"
-                        onClick={(e) => setVisibilityLogout(!visibilityLogout)}
-                      />
+                      <img src={LogOutButton} className="nav-button" onClick={(e) => setVisibilityLogout(!visibilityLogout)} />
                     </div>
                   </Grid>
                   <Grid item xs={6} md={8}>
                     <div className="nav-right-2">
-                      <img
-                        src={ViewAllTasksButton}
-                        className="nav-button"
-                        onClick={(e) =>
-                          setVisibilityAllTasks(!visibilityAllTasks)
-                        }
-                      />
+                      <img src={ViewAllTasksButton} className="nav-button" onClick={(e) => setVisibilityAllTasks(!visibilityAllTasks)}/>
                       <img
                         src={SetTasksButton}
                         className="nav-button"
                         onClick={(e) => setVisibilityTasks(!visibilityTasks)}
                       />
-                      <Link to="/youtube-player">
-                        <img
-                          src={ResumeLastVideoButton}
-                          className="nav-button"
-                          onClick={(e) => setCurrentNavState(!currentNavState)}
-                        />
-                      </Link>
+                      <Link to="/youtube-player"><img
+                        src={ResumeLastVideoButton}
+                        className="nav-button"
+                        onClick={(e) => setCurrentNavState(!currentNavState)}
+                      /></Link>
+
                     </div>
                   </Grid>
                 </Grid>
@@ -223,7 +211,8 @@ const Shelf = () => {
         onClose={popupCloseDetailsHandler}
         show={visibilityDetails}
         title="Details"
-      ></CustomPopup>
+      >
+      </CustomPopup>
 
       <ProfilePopup
         onClose={popupCloseProfileHandler}
@@ -237,6 +226,7 @@ const Shelf = () => {
           <img src={User} className="user" />
         </div>
       </ProfilePopup>
+
 
       <LogoutPopup
         onClose={popupCloseLogoutHandler}
@@ -311,26 +301,16 @@ const Shelf = () => {
             alt="Add new task button"
             onClick={() =>
               setOnDisplay(
-                [].concat([currentSelection], onDisplay.slice(0, 15))
+                [].concat(
+                  [currentSelection],
+                  onDisplay.slice(0, 15)
+                )
               )
             }
           />
         </div>
       </TasksPopup>
-
-      <AllTasksPopup
-        onClose={popupCloseAllTasksHandler}
-        show={visibilityAllTasks}
-        title="All Tasks"
-      >
-        <div>
-          <br />
-          <h3>We ship Steven x Daniel 😇😋</h3>
-          <br />
-          <img src={User} className="user" />
-        </div>
-      </AllTasksPopup>
-    </div>
+    </div >
   );
 };
 

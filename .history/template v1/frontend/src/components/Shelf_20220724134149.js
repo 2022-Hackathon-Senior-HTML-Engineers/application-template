@@ -317,19 +317,6 @@ const Shelf = () => {
           />
         </div>
       </TasksPopup>
-
-      <AllTasksPopup
-        onClose={popupCloseAllTasksHandler}
-        show={visibilityAllTasks}
-        title="All Tasks"
-      >
-        <div>
-          <br />
-          <h3>We ship Steven x Daniel 😇😋</h3>
-          <br />
-          <img src={User} className="user" />
-        </div>
-      </AllTasksPopup>
     </div>
   );
 };

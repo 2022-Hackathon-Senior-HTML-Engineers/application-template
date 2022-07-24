@@ -318,10 +318,10 @@ const Shelf = () => {
         </div>
       </TasksPopup>
 
-      <AllTasksPopup
-        onClose={popupCloseAllTasksHandler}
-        show={visibilityAllTasks}
-        title="All Tasks"
+      <ProfilePopup
+        onClose={popupCloseProfileHandler}
+        show={visibilityProfile}
+        title="Profile"
       >
         <div>
           <br />
@@ -329,7 +329,7 @@ const Shelf = () => {
           <br />
           <img src={User} className="user" />
         </div>
-      </AllTasksPopup>
+      </ProfilePopup>
     </div>
   );
 };

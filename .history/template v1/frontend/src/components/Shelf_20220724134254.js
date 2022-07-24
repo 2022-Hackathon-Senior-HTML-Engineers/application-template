@@ -320,8 +320,8 @@ const Shelf = () => {
 
       <AllTasksPopup
         onClose={popupCloseAllTasksHandler}
-        show={visibilityAllTasks}
-        title="All Tasks"
+        show={visibilityProfile}
+        title="Profile"
       >
         <div>
           <br />
