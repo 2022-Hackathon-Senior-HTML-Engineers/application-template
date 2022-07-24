@@ -33,6 +33,8 @@ import ViewAllTasksButton from "../images/view-all-tasks-button.png";
 
 //Profile Popup
 import DrinksGif from "../images/drinks-gif.gif";
+import { useReward } from 'react-rewards';
+
 
 const Shelf = () => {
   const [currentNavState, setCurrentNavState] =
@@ -87,6 +89,9 @@ const Shelf = () => {
     setVisibilityLogout(e);
   };
 
+  const { reward: confettiReward, isAnimating: isConfettiAnimating } = useReward('confettiReward', 'confetti');
+  const { reward: balloonsReward, isAnimating: isBalloonsAnimating } = useReward('balloonsReward', 'balloons');
+
   return (
     <div>
       <div className="shelf-sides">
@@ -138,20 +143,28 @@ const Shelf = () => {
                         onClick={(e) => setCurrentNavState(!currentNavState)}
                       />
                     </Link>
+                    <div id="balloonsReward">
+                      <div id="confettiReward">
+                        <img
+                          disabled={isConfettiAnimating || isBalloonsAnimating}
 
-                    <img
-                      src={FinishButton}
-                      className="finish-button"
-                      onClick={() =>
-                        setOnDisplay(
-                          [].concat(
-                            onDisplay.slice(0, itemPosition),
-                            onDisplay.slice(itemPosition + 1, 16),
-                            [[17, 15]]
-                          )
-                        )
-                      }
-                    />
+                          src={FinishButton}
+                          className="finish-button"
+                          onClick={() => {
+                            confettiReward();
+                            balloonsReward();
+                            setOnDisplay(
+                              [].concat(
+                                onDisplay.slice(0, itemPosition),
+                                onDisplay.slice(itemPosition + 1, 16),
+                                [[17, 15]]
+                              )
+                            )
+                          }
+                          }
+                        />
+                      </div>
+                    </div>
                     <div className="task-box">
                       <h5 style={{ marginTop: "4px", marginBottom: "4px" }}>
                         {TasksCollection[[currentTaskState]].title}
@@ -235,7 +248,7 @@ const Shelf = () => {
           <h3>We ship Steven x Daniel 😇😋</h3>
           <br />
           <img src={BigUser} className="user" />
-          <br/>
+          <br />
           <h3>Looking good today, you got no need to change your profile.</h3>
         </div>
       </ProfilePopup>
