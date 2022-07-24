@@ -17,6 +17,7 @@ import TasksCollection from "../data/TasksCollection";
 import TasksPopup from "../components/DetailsPopup";
 import CustomPopup from "../components/CustomPopup";
 import ProfilePopup from "../components/ProfilePopup";
+import LogoutPopup from "../components/LogoutPopup";
 
 import BackButton from "../images/back-button.png";
 import DetailsButton from "../images/details-button.png";
@@ -27,6 +28,10 @@ import SetTasksButton from "../images/set-tasks-button.png";
 import User from "../images/user.png";
 import ProfileButton from "../images/profile-button.png";
 import LogOutButton from "../images/log-out-button.png";
+
+//Profile Popup
+import DrinksGif from "../images/drinks-gif.gif"
+
 
 
 const Shelf = () => {
@@ -59,6 +64,7 @@ const Shelf = () => {
   const [visibilityDetails, setVisibilityDetails] = useState(false);
   const [visibilityTasks, setVisibilityTasks] = useState(false);
   const [visibilityProfile, setVisibilityProfile] = useState(false);
+  const [visibilityLogout, setVisibilityLogout] = useState(false);
 
   const popupCloseDetailsHandler = (e) => {
     setVisibilityDetails(e);
@@ -70,6 +76,10 @@ const Shelf = () => {
 
   const popupCloseProfileHandler = (e) => {
     setVisibilityProfile(e);
+  }
+
+  const popupCloseLogoutHandler = (e) => {
+    setVisibilityLogout(e);
   }
 
   return (
@@ -165,7 +175,7 @@ const Shelf = () => {
                       <br />
                       <img src={ProfileButton} className="nav-button" onClick={(e) => setVisibilityProfile(!visibilityProfile)} />
                       <br />
-                      <img src={LogOutButton} className="nav-button" onClick="" />
+                      <img src={LogOutButton} className="nav-button" onClick={(e) => setVisibilityLogout(!visibilityLogout)} />
                     </div>
                   </Grid>
                   <Grid item xs={6} md={8}>
@@ -202,7 +212,26 @@ const Shelf = () => {
         show={visibilityProfile}
         title="Profile"
       >
+        <div>
+          <br />
+          <h3>We ship Steven x Daniel 😇😋</h3>
+          <br />
+          <img src={User} className="user" />
+        </div>
       </ProfilePopup>
+
+
+      <LogoutPopup
+        onClose={popupCloseLogoutHandler}
+        show={visibilityLogout}
+        title="Log Out"
+      >
+        <div>
+          <br />
+          <h3>Finish your drinks first and then log off! 😊</h3>
+          <img src={DrinksGif} className="drinks-gif" />
+        </div>
+      </LogoutPopup>
 
       <TasksPopup onClose={popupCloseTasksHandler} show={visibilityTasks}>
         <div>
@@ -274,7 +303,7 @@ const Shelf = () => {
           />
         </div>
       </TasksPopup>
-    </div>
+    </div >
   );
 };
 

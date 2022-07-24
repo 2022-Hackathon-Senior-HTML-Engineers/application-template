@@ -241,8 +241,7 @@ input.error {
   cursor: pointer;
 }
 
-.back-button {
-}
+.back-button {}
 
 .back-button:hover {
   opacity: 0.6;
@@ -258,8 +257,7 @@ input.error {
   cursor: pointer;
 }
 
-.details-button {
-}
+.details-button {}
 
 .details-button:hover {
   opacity: 0.6;
@@ -376,11 +374,22 @@ input.error {
   background-repeat: no-repeat;
 }
 
-.drawing-pad-section {
-}
+.drawing-pad-section {}
 
 .stopwatch-section {
   background-color: yellow;
   height: 260px;
   width: 290px;
+}
+
+.drinks-gif {
+  padding-top: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.user {
+  height: 200px;
+  width: auto;
 }
