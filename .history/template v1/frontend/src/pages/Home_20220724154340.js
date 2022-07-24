@@ -1,6 +1,5 @@
 import CustomPopup from "../components/CustomPopup";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, Link } from "react";
 import { Grid } from "@mui/material";
 import Soju from "../images/popUpDrinks/soju.png";
 import Juice from "../images/popUpDrinks/juice.png";
