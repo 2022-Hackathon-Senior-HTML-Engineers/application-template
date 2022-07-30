@@ -13,7 +13,7 @@ const DrawingPad = () => {
       width="300px"
       height="260px"
       strokeWidth={4}
-      strokeColor="orange"
+      strokeColor="black"
     />
   );
 };
